@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ========================================
+   THEME TOKENS
+======================================== */
+
+@theme {
+  /* COLORS */
+  --color-primary: #c8a45d;
+  --color-primary-dark: #a8843f;
+
+  --color-background: #f8f6f2;
+  --color-surface: #ffffff;
+
+  --color-text: #1a1a1a;
+  --color-muted: #666666;
+
+  --color-border: rgba(0, 0, 0, 0.08);
+
+  /* TYPOGRAPHY */
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* SHADOWS */
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.06);
+
+  /* CONTAINER */
+  --spacing-container: 1280px;
+
+  /* RADIUS */
+  --radius-card: 24px;
+}
+
+/* ========================================
+   BASE STYLES
+======================================== */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  img {
+    @apply max-w-full block;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* ========================================
+   REUSABLE UTILITIES
+======================================== */
+
+@layer utilities {
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .container-custom {
+    width: 100%;
+    max-width: var(--spacing-container);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .container-custom {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding-inline: 4rem;
+    }
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(14px);
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .gold-gradient {
+    background: linear-gradient(
+      135deg,
+      #c8a45d 0%,
+      #f3d488 50%,
+      #a8843f 100%
+    );
+  }
+}
