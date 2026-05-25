@@ -1,17 +1,113 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import { Autoplay, EffectFade } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+import heroSlides from "../data/heroSlides";
+
 function Home() {
-    return (
-        <section className="min-h-screen flex items-center justify-center">
-            <div className="container-custom text-center">
-                <h1 className="text-5xl lg:text-7xl font-bold mb-6">
-                    Shradha Group
-                </h1>
-                <p className="text-muted max-w-2xl mx-auto">
-                    Premium Industrial, engineering, transport,
-                    steel and hydraulic solutions for a sustainable future.
-                </p>
+  return (
+    <section className="relative w-full h-screen overflow-hidden">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        loop={true}
+        speed={1200}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        className="h-full"
+      >
+        {heroSlides.map((slide) => (
+          <SwiperSlide key={slide.id}>
+            <div className="relative w-full h-screen">
+              
+              {/* BACKGROUND IMAGE */}
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+
+              {/* DARK OVERLAY */}
+              <div className="absolute inset-0 bg-white/80" />
+
+              {/* CONTENT */}
+              <div className="relative z-10 h-full flex items-center">
+                <div className="container-custom">
+                  
+                  <div className="max-w-4xl text-black/90">
+                    
+                    <span className="uppercase tracking-[5px] text-black/90 text-sm md:text-base">
+                      Shradha Group
+                    </span>
+
+                    <h1 className="
+                      text-5xl
+                      sm:text-6xl
+                      md:text-7xl
+                      lg:text-8xl
+                      leading-tight
+                      mt-6
+                      mb-6
+                    ">
+                      {slide.title}
+                    </h1>
+
+                    <p className="
+                      text-lg
+                      md:text-xl
+                      text-black/90
+                      max-w-2xl
+                      leading-relaxed
+                    ">
+                      {slide.subtitle}
+                    </p>
+
+                    {/* CTA BUTTONS */}
+                    <div className="flex flex-wrap gap-4 mt-10">
+                      <button className="
+                        px-8
+                        py-4
+                        bg-primary
+                        text-black
+                        font-medium
+                        rounded-full
+                        hover:scale-105
+                        transition-all
+                      ">
+                        Explore Services
+                      </button>
+
+                      {/* <button className="
+                        px-8
+                        py-4
+                        border
+                        border-white/30
+                        text-white
+                        rounded-full
+                        hover:bg-white
+                        hover:text-black
+                        transition-all
+                      ">
+                        Contact Us
+                      </button> */}
+                    </div>
+
+                  </div>
+
                 </div>
-        </section>
-    );
+              </div>
+
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
 }
 
 export default Home;

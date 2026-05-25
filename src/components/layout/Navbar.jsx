@@ -9,17 +9,21 @@ function Navbar() {
     <>
       {/* NAVBAR */}
       <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-black/5">
-        <div className="container-custom h-20 flex items-center justify-between">
+        <div className="container-custom h-24 flex items-center justify-between">
           
           {/* LOGO */}
           <a
             href="/"
-            className="text-2xl lg:text-3xl font-semibold"
+            className="flex items-center shrink-0"
           >
             <img
               src={logo}
               alt="Shradha Group Logo"
-              className="h-12"
+              className="h-14
+              sm:h-16
+              lg:h-20
+              w-auto
+              object-contain"
             />
           </a>
 
@@ -63,7 +67,7 @@ function Navbar() {
 
       {/* MOBILE MENU */}
       <div
-        className={`fixed top-0 right-0 h-screen w-[280px] bg-white z-[60] shadow-2xl transition-transform duration-300 lg:hidden ${
+        className={`fixed top-0 right-0 min-h-screen w-[280px] bg-white z-[60] shadow-2xl transition-transform duration-300 lg:hidden ${
           isOpen
             ? "translate-x-0"
             : "translate-x-full"
