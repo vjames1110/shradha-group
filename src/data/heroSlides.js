@@ -9,7 +9,7 @@ const heroSlides = [
     {
         id: 2,
         title: "Steel Trading & Allied Engineering",
-        subtitle: "Delivering premium steel trading and engineering excellence",
+        subtitle: "Delivering steel trading and engineering excellence",
         image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
     },
 

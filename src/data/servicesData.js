@@ -17,7 +17,7 @@ const servicesData = [
     {
         id: 2,
         title: "Steel Trading & Allied Engineering",
-        description: "Delivering premium steel trading and engineering excellence",
+        description: "Delivering steel trading and engineering excellence",
         icon: Factory,
     },
 
