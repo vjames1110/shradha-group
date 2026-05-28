@@ -6,6 +6,8 @@ import SectionHeading from "../common/SectionHeading";
 
 import { fadeUp, staggerContainer } from "../../utils/motionVariants";
 
+import { Link } from "react-router-dom";
+
 function ServiceSection() {
   return (
     <section className="section-padding bg-[#f8f6f2]">
@@ -20,6 +22,7 @@ function ServiceSection() {
         />
 
         {/* GRID */}
+        <Link to={servicesData[0].link} className="w-full">
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -93,6 +96,7 @@ function ServiceSection() {
             );
           })}
         </motion.div>
+        </Link>
 
       </div>
     </section>

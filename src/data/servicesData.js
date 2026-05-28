@@ -12,6 +12,7 @@ const servicesData = [
         title: "Hydraulic & Suspension Solutions",
         description: "Authorized solutions for Wipro Hydraulics Systems and Hendrickson Excellence.",
         icon: Cog,
+        link: "/businesses/hydraulics",
     },
 
     {
