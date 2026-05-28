@@ -1,47 +1,71 @@
 import {
-    Factory,
-    Truck,
-    Wrench,
-    Cog,
-    ShieldCheck,
+  Factory,
+  Truck,
+  Wrench,
+  Cog,
+  ShieldCheck,
 } from "lucide-react";
 
 const servicesData = [
-    {
-        id: 1,
-        title: "Hydraulic & Suspension Solutions",
-        description: "Authorized solutions for Wipro Hydraulics Systems and Hendrickson Excellence.",
-        icon: Cog,
-        link: "/businesses/hydraulics",
-    },
+  {
+    id: 1,
+    title: "Hydraulic Systems",
+    description:
+      "Authorized solutions for Wipro Hydraulic Systems and Hendrickson excellence services.",
+    icon: Cog,
+    link: "/businesses/hydraulics",
 
-    {
-        id: 2,
-        title: "Steel Trading & Allied Engineering",
-        description: "Delivering steel trading and engineering excellence",
-        icon: Factory,
-    },
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+  },
 
-    {
-        id: 3,
-        title: "Engineering & Fabrication Services",
-        description: "Industrial fabrication and engineering built with precision.",
-        icon: Wrench,
-    },
+  {
+    id: 2,
+    title: "Steel Trading",
+    description:
+      "Industrial steel trading and allied engineering solutions.",
+    icon: Factory,
+    link: "/businesses/steel-trading",
 
-    {
-        id: 4,
-        title: "Transport & Logistics Solutions",
-        description: "Reliable transport solution powering industrial operations.",
-        icon: Truck,
-    },
+    image:
+      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+  },
 
-    {
-        id: 5,
-        title: "DDGS & Agricultural Commodities",
-        description: "Sustainable agricultural commodities for a greener future.",
-        icon: ShieldCheck,
-    },
+  {
+    id: 3,
+    title: "Engineering Works",
+    description:
+      "Industrial fabrication and precision engineering services.",
+    icon: Wrench,
+    link: "/businesses/engineering-works",
+
+    image:
+      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122",
+  },
+
+  {
+    id: 4,
+    title: "Transport Services",
+    description:
+      "Reliable industrial logistics and transportation solutions.",
+    icon: Truck,
+    link: "/businesses/transport",
+
+    image:
+      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3",
+  },
+
+  {
+    id: 5,
+    title: "Cattle Feed Supply",
+    description:
+      "Premium DDGS cattle feed supply for sustainable livestock growth.",
+    icon: ShieldCheck,
+    link: "/businesses/cattle-feed",
+
+    image:
+      "https://images.unsplash.com/photo-1500595046743-cd271d694d30",
+  },
 ];
 
 export default servicesData;
