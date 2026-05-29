@@ -6,7 +6,7 @@ const features = [
   {
     title: "DDGS Feed Supply",
     description:
-      "Premium DDGS cattle feed solutions supporting livestock nutrition.",
+      "DDGS cattle feed solutions supporting livestock nutrition.",
   },
 
   {

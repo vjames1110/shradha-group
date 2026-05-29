@@ -200,7 +200,8 @@ function Footer() {
             <div className="space-y-5 text-white/70">
 
               <p>
-                Shop No. 112-113, Beside Kamal Motors<br />
+                Shop No. 112-113, <br />
+                Beside Kamal Motors,<br />
                 Transport Nagar,<br/>
                 Bilaspur, Chhattisgarh, India
               </p>
@@ -248,7 +249,6 @@ function Footer() {
           </a>
 
         </div>
-
       </div>
 
     </footer>

@@ -4,7 +4,7 @@ import FeaturesGrid from "../../components/business/FeaturesGrid";
 
 const features = [
   {
-    title: "Premium Steel Supply",
+    title: "Steel Supply",
     description:
       "High-quality industrial steel products for commercial and engineering applications.",
   },

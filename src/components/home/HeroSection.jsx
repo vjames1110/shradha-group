@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { Autoplay, EffectFade } from "swiper/modules";
 
+import { motion } from "framer-motion";
+
 import "swiper/css";
 import "swiper/css/effect-fade";
 
@@ -24,7 +26,6 @@ function HeroSection() {
         {heroSlides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-screen">
-
               {/* BACKGROUND IMAGE */}
               <img
                 src={slide.image}
@@ -38,9 +39,17 @@ function HeroSection() {
               {/* CONTENT */}
               <div className="relative z-10 h-full flex items-center">
                 <div className="container-custom">
-
-                  <div className="max-w-4xl text-black/90">
-
+                  <motion.div
+                    className="max-w-4xl text-black/90"
+                    animate={{
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
+                  >
                     <span className="uppercase tracking-[5px] text-black/90 text-sm md:text-base">
                       Shradha Group
                     </span>
@@ -88,12 +97,9 @@ function HeroSection() {
                         Explore Services
                       </button>
                     </div>
-
-                  </div>
-
+                  </motion.div>
                 </div>
               </div>
-
             </div>
           </SwiperSlide>
         ))}
