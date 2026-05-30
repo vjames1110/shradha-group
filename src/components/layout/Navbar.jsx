@@ -1,59 +1,39 @@
 import { useEffect, useState } from "react";
 
-import {
-  Menu,
-  X,
-  ChevronDown,
-} from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
-import {
-  Link,
-  NavLink,
-} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import logo from "../../assets/images/icons/SGLogoRmv.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const [isScrolled, setIsScrolled] =
-    useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
-  const [dropdownOpen, setDropdownOpen] =
-    useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener(
-      "scroll",
-      handleScroll
-    );
+    window.addEventListener("scroll", handleScroll);
 
-    return () =>
-      window.removeEventListener(
-        "scroll",
-        handleScroll
-      );
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinkClass = ({ isActive }) =>
     `
-      relative
-      text-sm
-      uppercase
-      tracking-wide
-      transition-all
-      duration-300
-      hover:text-primary
-      ${
-        isActive
-          ? "text-primary"
-          : "text-black"
-      }
-    `;
+    relative
+    text-sm
+    uppercase
+    tracking-wide
+    transition-all
+    duration-300
+    hover:text-primary
+    ${isActive ? "text-primary" : isScrolled ? "text-black" : "text-white"}
+  `;
 
   return (
     <>
@@ -70,199 +50,213 @@ function Navbar() {
           ${
             isScrolled
               ? "bg-white/80 backdrop-blur-xl shadow-lg border-b border-black/5"
-              : "bg-transparent"
+              : "bg-black/10 backdrop-blur-sm"
           }
         `}
       >
-
         <div
           className="
-            container-custom
-            h-24
-            flex
-            items-center
-            justify-between
-          "
+    container-custom
+    h-[100px]
+    flex
+    items-center
+  "
         >
-
           {/* LOGO */}
           <Link
             to="/"
-            className="relative z-50"
+            className="
+    flex
+    items-center
+    gap-4
+    shrink-0
+    z-50
+  "
           >
             <img
               src={logo}
               alt="Shradha Group"
               className="
-                h-20
-                sm:h-24
-                md:h-28
-                w-auto
-                object-contain
-                scale-110
-                origin-left
-              "
+      h-16
+      sm:h-20
+      md:h-24
+      w-auto
+      object-contain
+      brightness-110
+      contrast-125
+      saturate-125
+    "
             />
+
+            <div className="hidden md:block">
+              <h1
+                className={`
+        text-2xl
+        font-semibold
+        tracking-wide
+        transition-colors
+        duration-300
+        ${isScrolled ? "text-black" : "text-white"}
+      `}
+              >
+                Shradha Group
+              </h1>
+
+              <p
+                className={`
+        text-xs
+        uppercase
+        tracking-[4px]
+        transition-colors
+        duration-300
+        ${isScrolled ? "text-black/60" : "text-white/70"}
+      `}
+              >
+                Engineering Excellence
+              </p>
+            </div>
           </Link>
 
           {/* DESKTOP NAV */}
-          <nav
+          <div
             className="
-              hidden
-              lg:flex
-              items-center
-              gap-10
-            "
+    hidden
+    lg:flex
+    items-center
+    gap-12
+    ml-auto
+  "
           >
-
-            <NavLink
-              to="/"
-              className={navLinkClass}
+            {/* NAVIGATION */}
+            <nav
+              className="
+      flex
+      items-center
+      gap-10
+    "
             >
-              Home
-            </NavLink>
+              <NavLink to="/" className={navLinkClass}>
+                Home
+              </NavLink>
 
-            <NavLink
-              to="/about"
-              className={navLinkClass}
-            >
-              About
-            </NavLink>
+              <NavLink to="/about" className={navLinkClass}>
+                About
+              </NavLink>
 
-            {/* DROPDOWN */}
-            <div
-              className="relative"
-              onMouseEnter={() =>
-                setDropdownOpen(true)
-              }
-              onMouseLeave={() =>
-                setDropdownOpen(false)
-              }
-            >
-
-              <button
-                className="
-                  flex
-                  items-center
-                  gap-2
-                  text-sm
-                  uppercase
-                  tracking-wide
-                  hover:text-primary
-                  transition-colors
-                "
-              >
-                Businesses
-
-                <ChevronDown size={16} />
-              </button>
-
-              {/* DROPDOWN MENU */}
+              {/* DROPDOWN */}
               <div
-                className={`
-                  absolute
-                  top-full
-                  left-0
-                  mt-5
-                  w-[280px]
-                  bg-white
-                  rounded-[24px]
-                  shadow-2xl
-                  border
-                  border-black/5
-                  overflow-hidden
-                  transition-all
-                  duration-300
-                  ${
-                    dropdownOpen
-                      ? "opacity-100 visible translate-y-0"
-                      : "opacity-0 invisible -translate-y-2"
-                  }
-                `}
+                className="relative"
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
               >
+                <button
+                  className={`
+          flex
+          items-center
+          gap-2
+          text-sm
+          uppercase
+          tracking-wide
+          transition-colors
+          hover:text-primary
+          ${isScrolled ? "text-black" : "text-white"}
+        `}
+                >
+                  Businesses
+                  <ChevronDown size={16} />
+                </button>
 
-                <div className="p-4">
+                <div
+                  className={`
+          absolute
+          top-full
+          left-0
+          mt-5
+          w-[300px]
+          bg-white
+          rounded-[24px]
+          shadow-2xl
+          border
+          border-black/5
+          overflow-hidden
+          transition-all
+          duration-300
+          ${
+            dropdownOpen
+              ? "opacity-100 visible translate-y-0"
+              : "opacity-0 invisible -translate-y-2"
+          }
+        `}
+                >
+                  <div className="p-4">
+                    {[
+                      {
+                        name: "Hydraulic Systems",
+                        link: "/business/hydraulics",
+                      },
 
-                  {[
-                    {
-                      name: "Hydraulic Systems",
-                      link: "/business/hydraulics",
-                    },
+                      {
+                        name: "Steel Trading",
+                        link: "/business/steel-trading",
+                      },
 
-                    {
-                      name: "Steel Trading",
-                      link: "/business/steel-trading",
-                    },
+                      {
+                        name: "Engineering Works",
+                        link: "/business/engineering-works",
+                      },
 
-                    {
-                      name: "Engineering Works",
-                      link:
-                        "/business/engineering-works",
-                    },
+                      {
+                        name: "Transport Services",
+                        link: "/business/transport",
+                      },
 
-                    {
-                      name: "Transport Services",
-                      link: "/business/transport",
-                    },
-
-                    {
-                      name:
-                        "Cattle Feed Supply",
-                      link:
-                        "/business/cattle-feed",
-                    },
-                  ].map((item, index) => (
-                    <Link
-                      key={index}
-                      to={item.link}
-                      className="
-                        block
-                        px-5
-                        py-4
-                        rounded-2xl
-                        hover:bg-[#f8f6f2]
-                        transition-all
-                      "
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-
+                      {
+                        name: "Cattle Feed Supply",
+                        link: "/business/cattle-feed",
+                      },
+                    ].map((item) => (
+                      <Link
+                        key={item.link}
+                        to={item.link}
+                        className="
+                block
+                px-5
+                py-4
+                rounded-2xl
+                hover:bg-[#f8f6f2]
+                transition-all
+              "
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-
               </div>
 
-            </div>
+              <NavLink to="/contact" className={navLinkClass}>
+                Contact
+              </NavLink>
+            </nav>
 
-            <NavLink
-              to="/contact"
-              className={navLinkClass}
-            >
-              Contact
-            </NavLink>
-
-          </nav>
-
-          {/* CTA */}
-          <div className="hidden lg:block">
-
+            {/* CTA */}
             <Link
               to="/contact"
               className="
-                px-7
-                py-4
-                rounded-full
-                bg-primary
-                text-black
-                font-medium
-                hover:scale-105
-                transition-all
-                duration-300
-              "
+      px-7
+      py-4
+      rounded-full
+      bg-primary
+      text-black
+      font-medium
+      hover:scale-105
+      transition-all
+      duration-300
+      shadow-lg
+    "
             >
               Get In Touch
             </Link>
-
           </div>
 
           {/* MOBILE BUTTON */}
@@ -272,19 +266,11 @@ function Navbar() {
               relative
               z-50
             "
-            onClick={() =>
-              setIsOpen(!isOpen)
-            }
+            onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? (
-              <X size={32} />
-            ) : (
-              <Menu size={32} />
-            )}
+            {isOpen ? <X size={32} /> : <Menu size={32} />}
           </button>
-
         </div>
-
       </header>
 
       {/* MOBILE MENU */}
@@ -301,14 +287,9 @@ function Navbar() {
           transition-transform
           duration-500
           lg:hidden
-          ${
-            isOpen
-              ? "translate-x-0"
-              : "translate-x-full"
-          }
+          ${isOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
-
         <div
           className="
             flex
@@ -318,23 +299,14 @@ function Navbar() {
             gap-8
           "
         >
-
-          <NavLink
-            to="/"
-            className="text-xl"
-            onClick={() =>
-              setIsOpen(false)
-            }
-          >
+          <NavLink to="/" className="text-xl" onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
 
           <NavLink
             to="/about"
             className="text-xl"
-            onClick={() =>
-              setIsOpen(false)
-            }
+            onClick={() => setIsOpen(false)}
           >
             About
           </NavLink>
@@ -342,9 +314,7 @@ function Navbar() {
           <NavLink
             to="/business/hydraulics"
             className="text-xl"
-            onClick={() =>
-              setIsOpen(false)
-            }
+            onClick={() => setIsOpen(false)}
           >
             Businesses
           </NavLink>
@@ -352,15 +322,11 @@ function Navbar() {
           <NavLink
             to="/contact"
             className="text-xl"
-            onClick={() =>
-              setIsOpen(false)
-            }
+            onClick={() => setIsOpen(false)}
           >
             Contact
           </NavLink>
-
         </div>
-
       </div>
 
       {/* OVERLAY */}
@@ -373,9 +339,7 @@ function Navbar() {
             z-30
             lg:hidden
           "
-          onClick={() =>
-            setIsOpen(false)
-          }
+          onClick={() => setIsOpen(false)}
         />
       )}
     </>

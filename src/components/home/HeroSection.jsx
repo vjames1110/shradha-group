@@ -16,9 +16,9 @@ function HeroSection() {
         modules={[Autoplay, EffectFade]}
         effect="fade"
         loop={true}
-        speed={1200}
+        speed={1800}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         className="h-full"
@@ -27,20 +27,39 @@ function HeroSection() {
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-screen">
               {/* BACKGROUND IMAGE */}
-              <img
-                src={slide.image}
-                alt={slide.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="
+    absolute
+    inset-0
+    w-full
+    h-full
+    object-cover
+    brightness-[1]
+    saturate-[1.5]
+  "
+              >
+                <source src={slide.video} type="video/mp4" />
+              </video>
 
               {/* OVERLAY */}
-              <div className="absolute inset-0 bg-white/80" />
+              <div className="
+              absolute
+              inset-0
+              bg-gradient-to-r
+              from-black/60
+              via-black/35
+              to-black/20
+              " />
 
               {/* CONTENT */}
-              <div className="relative z-10 h-full flex items-center">
+              <div className="relative z-10 h-full flex items-center lg:pt-12">
                 <div className="container-custom">
                   <motion.div
-                    className="max-w-4xl text-black/90"
+                    className="max-w-4xl text-white"
                     animate={{
                       y: [0, -10, 0],
                     }}
@@ -50,9 +69,9 @@ function HeroSection() {
                       ease: "easeInOut",
                     }}
                   >
-                    <span className="uppercase tracking-[5px] text-black/90 text-sm md:text-base">
+                    {/* <span className="uppercase tracking-[5px] text-white text-sm md:text-base">
                       Shradha Group
-                    </span>
+                    </span> */}
 
                     <h1
                       className="
@@ -72,7 +91,7 @@ function HeroSection() {
                       className="
                         text-lg
                         md:text-xl
-                        text-black/90
+                        text-white
                         max-w-2xl
                         leading-relaxed
                       "
@@ -88,6 +107,8 @@ function HeroSection() {
                           py-4
                           bg-primary
                           text-black
+                          hover:bg-white
+                          hover:text-black
                           font-medium
                           rounded-full
                           hover:scale-105
