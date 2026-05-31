@@ -4,39 +4,45 @@ import FeaturesGrid from "../../components/business/FeaturesGrid";
 
 const features = [
   {
-    title: "Steel Supply",
-    description:
-      "High-quality industrial steel products for commercial and engineering applications.",
+    title: "Structural Steel Supply",
+    image: "STEEL_IMAGE",
+    shortDescription: "Premium steel distribution.",
+    fullDescription:
+      "Supplying high-quality structural steel products for industrial and infrastructure projects.",
+
+    applications: [
+      "Industrial Construction",
+      "Warehouses",
+      "Infrastructure",
+    ],
   },
 
   {
-    title: "Industrial Partnerships",
-    description:
-      "Reliable partnerships supporting large-scale industrial steel requirements.",
+    title: "Bulk Industrial Orders",
+    image: "BULK_STEEL_IMAGE",
+    shortDescription: "Large-scale steel procurement.",
+    fullDescription:
+      "Reliable sourcing and distribution for large industrial requirements.",
+
+    applications: [
+      "Factories",
+      "Engineering Projects",
+      "Industrial Expansion",
+    ],
   },
 
   {
-    title: "Allied Engineering",
-    description:
-      "Integrated engineering support solutions for industrial projects.",
-  },
+    title: "Allied Engineering Support",
+    image: "ENGINEERING_STEEL_IMAGE",
+    shortDescription: "Technical steel solutions.",
+    fullDescription:
+      "Engineering support ensuring optimal steel selection and application.",
 
-  {
-    title: "Bulk Distribution",
-    description:
-      "Efficient steel procurement and nationwide distribution services.",
-  },
-
-  {
-    title: "Quality Assurance",
-    description:
-      "Strict quality standards ensuring reliable industrial-grade materials.",
-  },
-
-  {
-    title: "Long-Term Reliability",
-    description:
-      "Trusted steel trading operations focused on business continuity.",
+    applications: [
+      "Industrial Design",
+      "Project Planning",
+      "Fabrication",
+    ],
   },
 ];
 
@@ -47,12 +53,18 @@ function SteelTradingPage() {
         title="Steel Trading & Allied Engineering"
         subtitle="Reliable industrial steel trading solutions supporting engineering and infrastructure growth."
         image="https://images.unsplash.com/photo-1517048676732-d65bc937f952"
+        highlights={[
+          "Steel Supply",
+          "Bulk Industrial Supply",
+          "Reliable Distribution"
+        ]}
       />
 
       <BusinessOverview
         heading="Reliable Industrial Steel Solutions"
         description="Shradha Group delivers dependable steel trading and engineering support services helping industries achieve operational efficiency, project reliability, and long-term industrial growth."
       />
+
 
       <FeaturesGrid features={features} />
     </>

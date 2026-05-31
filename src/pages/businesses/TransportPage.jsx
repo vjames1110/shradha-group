@@ -4,39 +4,45 @@ import FeaturesGrid from "../../components/business/FeaturesGrid";
 
 const features = [
   {
-    title: "Industrial Logistics",
-    description:
-      "Reliable logistics and transportation solutions for industrial operations.",
+    title: "Fleet Transportation",
+    image: "TRANSPORT_IMAGE",
+    shortDescription: "Reliable logistics solutions.",
+    fullDescription:
+      "Professional transportation services supporting industrial and commercial operations.",
+
+    applications: [
+      "Industrial Goods",
+      "Construction Materials",
+      "Commercial Logistics",
+    ],
   },
 
   {
-    title: "Fleet Operations",
-    description:
-      "Efficient fleet management ensuring timely business deliveries.",
+    title: "Pan India Logistics",
+    image: "LOGISTICS_IMAGE",
+    shortDescription: "Nationwide delivery network.",
+    fullDescription:
+      "Efficient logistics management ensuring timely deliveries across India.",
+
+    applications: [
+      "Manufacturing",
+      "Distribution",
+      "Supply Chains",
+    ],
   },
 
   {
     title: "Supply Chain Support",
-    description:
-      "Integrated transportation systems supporting industrial supply chains.",
-  },
+    image: "SUPPLY_CHAIN_IMAGE",
+    shortDescription: "Optimized transportation planning.",
+    fullDescription:
+      "Supporting business operations through efficient supply chain logistics.",
 
-  {
-    title: "Nationwide Services",
-    description:
-      "Transportation solutions serving multiple industrial regions.",
-  },
-
-  {
-    title: "Operational Reliability",
-    description:
-      "Consistent and dependable logistics management services.",
-  },
-
-  {
-    title: "Business Efficiency",
-    description:
-      "Transport systems designed for operational productivity and growth.",
+    applications: [
+      "Warehousing",
+      "Industrial Operations",
+      "Commercial Trade",
+    ],
   },
 ];
 
@@ -47,6 +53,11 @@ function TransportPage() {
         title="Transport & Logistics Services"
         subtitle="Efficient industrial transport and logistics solutions supporting business continuity."
         image="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3"
+        highlights={[
+          "Pan India Logistics",
+          "On-Time Deliveries",
+          "Fleet-Management"
+        ]}
       />
 
       <BusinessOverview

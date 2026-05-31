@@ -4,39 +4,45 @@ import FeaturesGrid from "../../components/business/FeaturesGrid";
 
 const features = [
   {
-    title: "Industrial Fabrication",
-    description:
-      "Precision fabrication services for industrial engineering operations.",
+    title: "Custom Fabrication",
+    image: "FABRICATION_IMAGE",
+    shortDescription: "Tailored industrial fabrication.",
+    fullDescription:
+      "Custom fabrication solutions built according to project specifications.",
+
+    applications: [
+      "Industrial Plants",
+      "Machinery Components",
+      "Infrastructure Projects",
+    ],
   },
 
   {
-    title: "Custom Engineering",
-    description:
-      "Tailored engineering solutions designed for industrial businesses.",
+    title: "Precision Engineering",
+    image: "PRECISION_IMAGE",
+    shortDescription: "High-accuracy engineering.",
+    fullDescription:
+      "Engineering services focused on precision, efficiency, and durability.",
+
+    applications: [
+      "Manufacturing",
+      "Industrial Systems",
+      "Automation",
+    ],
   },
 
   {
-    title: "Mechanical Expertise",
-    description:
-      "Advanced mechanical support and engineering consultation services.",
-  },
+    title: "Industrial Projects",
+    image: "PROJECT_IMAGE",
+    shortDescription: "End-to-end project execution.",
+    fullDescription:
+      "Comprehensive engineering project planning and execution services.",
 
-  {
-    title: "Plant Infrastructure",
-    description:
-      "Engineering systems supporting industrial infrastructure development.",
-  },
-
-  {
-    title: "Manufacturing Support",
-    description:
-      "Reliable manufacturing and fabrication assistance for projects.",
-  },
-
-  {
-    title: "Technical Precision",
-    description:
-      "Accurate and efficient engineering execution for industrial applications.",
+    applications: [
+      "Factories",
+      "Processing Plants",
+      "Infrastructure",
+    ],
   },
 ];
 
@@ -47,6 +53,11 @@ function EngineeringWorks() {
         title="Engineering & Fabrication Works"
         subtitle="Precision engineering and industrial fabrication solutions built for reliability and performance."
         image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122"
+        highlights={[
+          "Custom Fabrication",
+          "Precision Engineering",
+          "Industrial Projects"
+        ]}
       />
 
       <BusinessOverview

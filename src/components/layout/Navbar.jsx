@@ -57,9 +57,10 @@ function Navbar() {
         <div
           className="
     container-custom
-    h-[100px]
+    h-24
     flex
     items-center
+    justify-between
   "
         >
           {/* LOGO */}
@@ -77,9 +78,9 @@ function Navbar() {
               src={logo}
               alt="Shradha Group"
               className="
-      h-16
-      sm:h-20
-      md:h-24
+      h-14
+      sm:h-16
+      lg:h-20
       w-auto
       object-contain
       brightness-110
@@ -88,33 +89,23 @@ function Navbar() {
     "
             />
 
-            <div className="hidden md:block">
-              <h1
-                className={`
-        text-2xl
-        font-semibold
-        tracking-wide
-        transition-colors
-        duration-300
-        ${isScrolled ? "text-black" : "text-white"}
-      `}
-              >
-                Shradha Group
-              </h1>
-
-              <p
-                className={`
-        text-xs
-        uppercase
-        tracking-[4px]
-        transition-colors
-        duration-300
-        ${isScrolled ? "text-black/60" : "text-white/70"}
-      `}
-              >
-                Engineering Excellence
-              </p>
-            </div>
+            <div className="hidden sm:block">
+  <h1
+    className={`
+      text-xl
+      md:text-2xl
+      lg:text-[1.75 rem]
+      font-semibold
+      uppercase
+      tracking-wider
+      transition-colors
+      duration-300
+      ${isScrolled ? "text-black" : "text-white"}
+    `}
+  >
+    SHRADHA GROUP
+  </h1>
+</div>
           </Link>
 
           {/* DESKTOP NAV */}
@@ -123,8 +114,8 @@ function Navbar() {
     hidden
     lg:flex
     items-center
-    gap-12
     ml-auto
+    gap-16
   "
           >
             {/* NAVIGATION */}
@@ -132,7 +123,7 @@ function Navbar() {
               className="
       flex
       items-center
-      gap-10
+      gap-12
     "
             >
               <NavLink to="/" className={navLinkClass}>
@@ -170,7 +161,8 @@ function Navbar() {
                   className={`
           absolute
           top-full
-          left-0
+          left-1/2
+          -transform-x-1/2
           mt-5
           w-[300px]
           bg-white
@@ -261,11 +253,15 @@ function Navbar() {
 
           {/* MOBILE BUTTON */}
           <button
-            className="
+            className={`
               lg:hidden
               relative
               z-50
-            "
+              ml-auto
+              transition-colors
+              duration-300
+              ${isScrolled ? "text-black" : "text-white"}
+            `}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={32} /> : <Menu size={32} />}

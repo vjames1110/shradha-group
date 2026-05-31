@@ -5,36 +5,44 @@ import { ArrowUpRight } from "lucide-react";
 const features = [
   {
     title: "DDGS Feed Supply",
-    description:
-      "DDGS cattle feed solutions supporting livestock nutrition.",
+    image: "DDGS_IMAGE",
+    shortDescription: "High-quality cattle nutrition.",
+    fullDescription:
+      "Supplying premium DDGS feed products for healthy livestock development.",
+
+    applications: [
+      "Dairy Farms",
+      "Livestock Operations",
+      "Feed Distribution",
+    ],
   },
 
   {
-    title: "Nutritional Quality",
-    description:
-      "High-quality feed products ensuring sustainable animal growth.",
+    title: "Agricultural Commodities",
+    image: "AGRI_IMAGE",
+    shortDescription: "Reliable commodity sourcing.",
+    fullDescription:
+      "Providing agricultural products supporting modern farming practices.",
+
+    applications: [
+      "Agriculture",
+      "Feed Industry",
+      "Rural Enterprises",
+    ],
   },
 
   {
-    title: "Agricultural Support",
-    description: "Reliable agricultural product supply for farming operations.",
-  },
+    title: "Sustainable Feed Solutions",
+    image: "SUSTAINABLE_IMAGE",
+    shortDescription: "Environmentally responsible nutrition.",
+    fullDescription:
+      "Promoting sustainable livestock growth through quality feed products.",
 
-  {
-    title: "Bulk Feed Distribution",
-    description:
-      "Efficient feed distribution services for commercial livestock businesses.",
-  },
-
-  {
-    title: "Sustainable Growth",
-    description: "Feed solutions focused on healthy livestock development.",
-  },
-
-  {
-    title: "Trusted Supply Chain",
-    description:
-      "Dependable cattle feed operations serving agricultural industries.",
+    applications: [
+      "Dairy Farming",
+      "Poultry",
+      "Animal Nutrition",
+    ],
   },
 ];
 
@@ -45,6 +53,11 @@ function CattleField() {
         title="DDGS Cattle Feed Supply"
         subtitle="Reliable cattle feed solutions supporting modern agricultural and livestock operations."
         image="https://images.unsplash.com/photo-1500595046743-cd271d694d30"
+        highlights={[
+          "High Quality DDGS",
+          "Trusted Feed Supply",
+          "Sustainale Agriculture"
+        ]}
       />
 
       <section className="section-padding bg-white">
