@@ -4,6 +4,8 @@ import SectionHeading from "../common/SectionHeading";
 
 import { fadeUp } from "../../utils/motionVariants";
 
+import directorImage from "../../assets/images/icons/directorImage.png"
+
 function DirectorMessage() {
   return (
     <section className="section-padding bg-white">
@@ -43,7 +45,7 @@ function DirectorMessage() {
 
             {/* IMAGE */}
             <img
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+              src={directorImage}
               alt="Director"
               className="
       relative

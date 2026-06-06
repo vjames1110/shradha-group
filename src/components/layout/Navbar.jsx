@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
-
 import { Menu, X, ChevronDown } from "lucide-react";
-
 import { Link, NavLink } from "react-router-dom";
 
-import logo from "../../assets/images/icons/SGLogoRmv.png";
+import logo from "../../assets/images/icons/SG.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,15 +20,41 @@ function Navbar() {
 
   const navLinkClass = ({ isActive }) =>
     `
-    relative
-    text-sm
-    uppercase
-    tracking-wide
-    transition-all
-    duration-300
-    hover:text-primary
-    ${isActive ? "text-primary" : isScrolled ? "text-black" : "text-white"}
-  `;
+      relative
+      text-sm
+      uppercase
+      tracking-[2px]
+      font-medium
+      transition-all
+      duration-300
+      hover:text-primary
+      ${
+        isActive ? "text-primary" : isScrolled ? "text-slate-800" : "text-white"
+      }
+    `;
+
+  const businesses = [
+    {
+      name: "Hydraulic Systems",
+      link: "/businesses/hydraulics",
+    },
+    {
+      name: "Steel Trading",
+      link: "/businesses/steel-trading",
+    },
+    {
+      name: "Engineering Works",
+      link: "/businesses/engineering-works",
+    },
+    {
+      name: "Transport Services",
+      link: "/businesses/transport",
+    },
+    {
+      name: "Cattle Feed Supply",
+      link: "/businesses/cattle-feed",
+    },
+  ];
 
   return (
     <>
@@ -49,19 +70,19 @@ function Navbar() {
           duration-500
           ${
             isScrolled
-              ? "bg-white/80 backdrop-blur-xl shadow-lg border-b border-black/5"
-              : "bg-black/10 backdrop-blur-sm"
+              ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200"
+              : "bg-slate-950/45 backdrop-blur-2xl border-b border-white/10"
           }
         `}
       >
         <div
           className="
-    container-custom
-    h-24
-    flex
-    items-center
-    justify-between
-  "
+            container-custom
+            h-32
+            flex
+            items-center
+            justify-between
+          "
         >
           {/* LOGO */}
           <Link
@@ -69,7 +90,7 @@ function Navbar() {
             className="
     flex
     items-center
-    gap-4
+    gap-2
     shrink-0
     z-50
   "
@@ -78,53 +99,73 @@ function Navbar() {
               src={logo}
               alt="Shradha Group"
               className="
-      h-14
-      sm:h-16
-      lg:h-20
+      h-20
+      sm:h-24
+      lg:h-28
+      xl:h-32
       w-auto
       object-contain
-      brightness-110
-      contrast-125
-      saturate-125
     "
             />
 
-            <div className="hidden sm:block">
-  <h1
-    className={`
-      text-xl
-      md:text-2xl
-      lg:text-[1.75 rem]
-      font-semibold
-      uppercase
-      tracking-wider
-      transition-colors
-      duration-300
-      ${isScrolled ? "text-black" : "text-white"}
-    `}
-  >
-    SHRADHA GROUP
-  </h1>
-</div>
+            <div
+              className="
+      hidden
+      sm:flex
+      flex-col
+      justify-center
+      translate-y-7.5
+    "
+            >
+              <span
+                className="
+        text-[1.6rem]
+        md:text-[1.9rem]
+        font-extrabold
+        tracking-wide
+        text-[#0057B8]
+        leading-tight
+      "
+                style={{
+                  fontFamily: "Alice, serif",
+                }}
+              >
+                SHRADHA
+              </span>
+
+              <span
+                className="
+        text-[1.6rem]
+        md:text-[1.9rem]
+        font-extrabold
+        tracking-wide
+        text-[#0057B8]
+        leading-tight
+      "
+                style={{
+                  fontFamily: "Alice, serif",
+                }}
+              >
+                GROUP
+              </span>
+            </div>
           </Link>
 
           {/* DESKTOP NAV */}
           <div
             className="
-    hidden
-    lg:flex
-    items-center
-    ml-auto
-    gap-16
-  "
+              hidden
+              lg:flex
+              items-center
+              ml-auto
+            "
           >
-            {/* NAVIGATION */}
             <nav
               className="
-      flex
-      items-center
-      gap-12
-    "
+                flex
+                items-center
+                gap-14
+              "
             >
               <NavLink to="/" className={navLinkClass}>
                 Home
@@ -134,94 +175,85 @@ function Navbar() {
                 About
               </NavLink>
 
-              {/* DROPDOWN */}
-              <div
-                className="relative"
-                onMouseEnter={() => setDropdownOpen(true)}
-                onMouseLeave={() => setDropdownOpen(false)}
-              >
+              {/* BUSINESSES */}
+              <div className="relative group">
                 <button
                   className={`
-          flex
-          items-center
-          gap-2
-          text-sm
-          uppercase
-          tracking-wide
-          transition-colors
-          hover:text-primary
-          ${isScrolled ? "text-black" : "text-white"}
-        `}
+      flex
+      items-center
+      gap-2
+      text-sm
+      uppercase
+      tracking-[2px]
+      font-medium
+      transition-colors
+      duration-300
+      hover:text-primary
+      ${isScrolled ? "text-slate-800" : "text-white"}
+    `}
                 >
                   Businesses
-                  <ChevronDown size={16} />
+                  <ChevronDown
+                    size={16}
+                    className="
+        transition-transform
+        duration-300
+        group-hover:rotate-180
+      "
+                  />
                 </button>
 
                 <div
-                  className={`
-          absolute
-          top-full
-          left-1/2
-          -transform-x-1/2
-          mt-5
-          w-[300px]
-          bg-white
-          rounded-[24px]
-          shadow-2xl
-          border
-          border-black/5
-          overflow-hidden
-          transition-all
-          duration-300
-          ${
-            dropdownOpen
-              ? "opacity-100 visible translate-y-0"
-              : "opacity-0 invisible -translate-y-2"
-          }
-        `}
+                  className="
+      absolute
+      top-full
+      left-1/2
+      -translate-x-1/2
+      pt-4
+      w-[340px]
+      opacity-0
+      invisible
+      translate-y-2
+      group-hover:opacity-100
+      group-hover:visible
+      group-hover:translate-y-0
+      transition-all
+      duration-300
+      z-50
+    "
                 >
-                  <div className="p-4">
-                    {[
-                      {
-                        name: "Hydraulic Systems",
-                        link: "/business/hydraulics",
-                      },
-
-                      {
-                        name: "Steel Trading",
-                        link: "/business/steel-trading",
-                      },
-
-                      {
-                        name: "Engineering Works",
-                        link: "/business/engineering-works",
-                      },
-
-                      {
-                        name: "Transport Services",
-                        link: "/business/transport",
-                      },
-
-                      {
-                        name: "Cattle Feed Supply",
-                        link: "/business/cattle-feed",
-                      },
-                    ].map((item) => (
-                      <Link
-                        key={item.link}
-                        to={item.link}
-                        className="
-                block
-                px-5
-                py-4
-                rounded-2xl
-                hover:bg-[#f8f6f2]
-                transition-all
-              "
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
+                  <div
+                    className="
+        bg-white
+        rounded-[28px]
+        shadow-[0_25px_60px_rgba(0,0,0,0.12)]
+        border
+        border-slate-100
+        overflow-hidden
+      "
+                  >
+                    <div className="p-4">
+                      {businesses.map((item) => (
+                        <Link
+                          key={item.link}
+                          to={item.link}
+                          className="
+              block
+              px-5
+              py-4
+              rounded-2xl
+              text-slate-700
+              hover:bg-gradient-to-r
+              hover:from-blue-50
+              hover:to-violet-50
+              hover:text-[#0057B8]
+              transition-all
+            "
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -230,25 +262,6 @@ function Navbar() {
                 Contact
               </NavLink>
             </nav>
-
-            {/* CTA */}
-            <Link
-              to="/contact"
-              className="
-      px-7
-      py-4
-      rounded-full
-      bg-primary
-      text-black
-      font-medium
-      hover:scale-105
-      transition-all
-      duration-300
-      shadow-lg
-    "
-            >
-              Get In Touch
-            </Link>
           </div>
 
           {/* MOBILE BUTTON */}
@@ -260,7 +273,7 @@ function Navbar() {
               ml-auto
               transition-colors
               duration-300
-              ${isScrolled ? "text-black" : "text-white"}
+              ${isScrolled ? "text-slate-900" : "text-white"}
             `}
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -276,7 +289,8 @@ function Navbar() {
           top-0
           right-0
           h-screen
-          w-[320px]
+          w-[280px]
+          sm:w-[320px]
           bg-white
           z-40
           shadow-2xl
@@ -295,6 +309,18 @@ function Navbar() {
             gap-8
           "
         >
+          <h2
+            className="
+              text-2xl
+              font-semibold
+              pb-6
+              border-b
+              border-slate-200
+            "
+          >
+            SHRADHA <span className="text-[#0057B8]">GROUP</span>
+          </h2>
+
           <NavLink to="/" className="text-xl" onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
@@ -308,7 +334,7 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/business/hydraulics"
+            to="/businesses/hydraulics"
             className="text-xl"
             onClick={() => setIsOpen(false)}
           >
@@ -331,7 +357,8 @@ function Navbar() {
           className="
             fixed
             inset-0
-            bg-black/40
+            bg-black/50
+            backdrop-blur-sm
             z-30
             lg:hidden
           "

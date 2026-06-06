@@ -6,16 +6,19 @@ import servicesData from "../../data/servicesData";
 
 import SectionHeading from "../common/SectionHeading";
 
-import {
-  fadeUp,
-  staggerContainer,
-} from "../../utils/motionVariants";
+import { fadeUp, staggerContainer } from "../../utils/motionVariants";
 
 function ServiceSection() {
   return (
-    <section className="section-padding bg-[#f8f6f2]">
+    <section
+      className="
+              section-padding
+              bg-gradient-to-b
+              from-white
+              via-blue-50
+              to-violet-50"
+    >
       <div className="container-custom">
-
         {/* HEADING */}
         <SectionHeading
           subtitle="Our Businesses"
@@ -37,28 +40,24 @@ function ServiceSection() {
             gap-8
           "
         >
-
           {servicesData.map((service) => (
-            <motion.div
-              key={service.id}
-              variants={fadeUp}
-            >
-
-              <Link
-                to={service.link}
-                className="block group"
-              >
-
+            <motion.div key={service.id} variants={fadeUp}>
+              <Link to={service.link} className="block group">
                 <div
                   className="
                     relative
                     overflow-hidden
                     rounded-[32px]
                     h-[500px]
-                    shadow-soft
+                    border
+                    border-white/20
+                    shadow-xl
+                    backdrop-blur-xl
+                    group-hover: shadow-[0_30px_80px_rgba(59,130,246,0.25)]
+                    transition-all
+                    duration-500
                   "
                 >
-
                   {/* BACKGROUND IMAGE */}
                   <img
                     src={service.image}
@@ -81,9 +80,9 @@ function ServiceSection() {
                       absolute
                       inset-0
                       bg-gradient-to-t
-                      from-black/90
-                      via-black/40
-                      to-black/10
+                      from-slate-950/95
+                      via-slate-900/50
+                      to-transparent
                     "
                   />
 
@@ -100,36 +99,36 @@ function ServiceSection() {
                       text-white
                     "
                   >
-
-                    {/* ICON */}
                     <div
                       className="
-                        w-16
-                        h-16
-                        rounded-2xl
-                        bg-primary/20
-                        backdrop-blur-md
-                        flex
+                        inline-flex
                         items-center
-                        justify-center
-                        mb-6
+                        px-4
+                        py-2
+                        rounded-full
+                       bg-white/10
+                        backdrop-blur-xl
+                        border
+                       border-white/20
+                       text-white
+                        text-xs
+                        uppercase
+                        tracking-[2px]
+                        mb-5
                       "
                     >
-                      <service.icon
-                        className="
-                          w-8
-                          h-8
-                          text-primary
-                        "
-                      />
+                      Shradha Group
                     </div>
 
                     {/* TITLE */}
                     <h3
                       className="
                         text-3xl
-                        mb-4
+                        xl:text-[2rem]
+                        text-white
+                        font-semibold
                         leading-tight
+                        mb-4
                       "
                     >
                       {service.title}
@@ -138,7 +137,7 @@ function ServiceSection() {
                     {/* DESCRIPTION */}
                     <p
                       className="
-                        text-white/80
+                        text-white/85
                         leading-relaxed
                         mb-8
                       "
@@ -148,39 +147,45 @@ function ServiceSection() {
 
                     {/* BUTTON */}
                     <div>
-
                       <span
                         className="
                           inline-flex
                           items-center
-                          gap-2
+                          gap-3
                           px-6
                           py-3
                           rounded-full
-                          bg-primary
-                          text-black
+                         text-white
                           font-medium
-                          group-hover:scale-105
+                          border
+                         border-white/20
+                         bg-white/10
+                          backdrop-blur-xl
+                          group-hover:bg-gradient-to-r
+                         group-hover:from-blue-600
+                         group-hover:to-violet-600
                           transition-all
                           duration-300
                         "
                       >
-                        Explore Service →
+                        Explore Service
+                        <span
+                          className="
+                            transition-transform
+                            duration-300
+                            group-hover:translate-x-1
+                          "
+                        >
+                          →
+                        </span>
                       </span>
-
                     </div>
-
                   </div>
-
                 </div>
-
               </Link>
-
             </motion.div>
           ))}
-
         </motion.div>
-
       </div>
     </section>
   );

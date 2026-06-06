@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import "swiper/css";
@@ -8,15 +9,16 @@ import "swiper/css/effect-fade";
 import heroSlides from "../../data/heroSlides";
 
 function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section className="relative w-full h-screen overflow-hidden">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
         loop={true}
-        speed={1800}
+        speed={1000}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         className="h-full"
@@ -36,7 +38,8 @@ function HeroSection() {
                   w-full
                   h-full
                   object-cover
-                  brightness-[0.9]
+                  brightness-[1.08]
+                  contrast-[1.15]
                   saturate-[1.2]
                 "
               >
@@ -49,9 +52,9 @@ function HeroSection() {
                   absolute
                   inset-0
                   bg-gradient-to-r
-                  from-[#0f172a]/85
-                  via-[#1e3a8a]/60
-                  to-[#7c3aed]/35
+                  from-[#0f172a]/65
+                  via-[#1e3a8a]/40
+                  to-[#7c3aed]/20
                 "
               />
 
@@ -142,18 +145,33 @@ function HeroSection() {
                     </p>
 
                     {/* CTA */}
-                    <div className="flex flex-wrap gap-5 mt-12">
+                    <div
+                      className="
+                          flex
+                          flex-col
+                          sm:flex-row
+                          gap-4
+                          mt-12
+                          "
+                    >
                       <button
+                        onClick={() =>
+                          document.getElementById("services")?.scrollIntoView({
+                            behavior: "smooth",
+                          })
+                        }
                         className="
+                          w-full
+                          sm:w-auto
                           px-8
                           py-4
                           rounded-full
-                          text-white
+                         text-white
                           font-medium
                           bg-gradient-to-r
-                          from-blue-600
-                          via-blue-500
-                          to-violet-600
+                         from-blue-600
+                         via-blue-500
+                         to-violet-600
                           hover:scale-105
                           hover:shadow-[0_15px_50px_rgba(59,130,246,0.35)]
                           transition-all
@@ -164,16 +182,19 @@ function HeroSection() {
                       </button>
 
                       <button
+                        onClick={() => navigate("/contact")}
                         className="
+                          w-full
+                          sm:w-auto
                           px-8
                           py-4
                           rounded-full
                           border
-                          border-white/20
-                          bg-white/10
+                         border-white/20
+                         bg-white/10
                           backdrop-blur-xl
-                          text-white
-                          hover:bg-white/20
+                         text-white
+                         hover:bg-white/20
                           transition-all
                           duration-300
                         "

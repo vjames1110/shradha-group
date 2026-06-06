@@ -1,18 +1,9 @@
-import {
-  Factory,
-  Truck,
-  Wrench,
-  Cog,
-  ShieldCheck,
-} from "lucide-react";
-
 const servicesData = [
   {
     id: 1,
     title: "Hydraulic Systems",
     description:
       "Authorized solutions for Wipro Hydraulic Systems and Hendrickson excellence services.",
-    icon: Cog,
     link: "/businesses/hydraulics",
 
     image:
@@ -24,7 +15,6 @@ const servicesData = [
     title: "Steel Trading",
     description:
       "Industrial steel trading and allied engineering solutions.",
-    icon: Factory,
     link: "/businesses/steel-trading",
 
     image:
@@ -36,7 +26,6 @@ const servicesData = [
     title: "Engineering Works",
     description:
       "Industrial fabrication and precision engineering services.",
-    icon: Wrench,
     link: "/businesses/engineering-works",
 
     image:
@@ -48,7 +37,6 @@ const servicesData = [
     title: "Transport Services",
     description:
       "Reliable industrial logistics and transportation solutions.",
-    icon: Truck,
     link: "/businesses/transport",
 
     image:
@@ -60,7 +48,6 @@ const servicesData = [
     title: "Cattle Feed Supply",
     description:
       "Premium DDGS cattle feed supply for sustainable livestock growth.",
-    icon: ShieldCheck,
     link: "/businesses/cattle-feed",
 
     image:
