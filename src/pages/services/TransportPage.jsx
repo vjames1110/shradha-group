@@ -2,10 +2,14 @@ import BusinessHero from "../../components/business/BusinessHero";
 import BusinessOverview from "../../components/business/BusinessOverview";
 import FeaturesGrid from "../../components/business/FeaturesGrid";
 
+import fleetImage from "../../assets/images/services/transport/fleet-trasnportation.webp"
+import panIndiaImage from "../../assets/images/services/transport/pan-India.webp"
+import scmImage from "../../assets/images/services/transport/supply-chain.webp"
+
 const features = [
   {
     title: "Fleet Transportation",
-    image: "TRANSPORT_IMAGE",
+    image: fleetImage,
     shortDescription: "Reliable logistics solutions.",
     fullDescription:
       "Professional transportation services supporting industrial and commercial operations.",
@@ -19,7 +23,7 @@ const features = [
 
   {
     title: "Pan India Logistics",
-    image: "LOGISTICS_IMAGE",
+    image: panIndiaImage,
     shortDescription: "Nationwide delivery network.",
     fullDescription:
       "Efficient logistics management ensuring timely deliveries across India.",
@@ -33,7 +37,7 @@ const features = [
 
   {
     title: "Supply Chain Support",
-    image: "SUPPLY_CHAIN_IMAGE",
+    image: scmImage,
     shortDescription: "Optimized transportation planning.",
     fullDescription:
       "Supporting business operations through efficient supply chain logistics.",

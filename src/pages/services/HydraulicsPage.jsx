@@ -2,11 +2,16 @@ import BusinessHero from "../../components/business/BusinessHero";
 import BusinessOverview from "../../components/business/BusinessOverview";
 import FeaturesGrid from "../../components/business/FeaturesGrid";
 
+import hydraulicImage from "../../assets/images/services/hydraulics/hydraulic-system.webp"
+import authorizedImage from "../../assets/images/services/hydraulics/authorized-solutions.webp"
+import suspensionImage from "../../assets/images/services/hydraulics/suspension.webp"
+
+
 const features = [
   {
     title: "Hydraulic Systems",
 
-    image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c",
+    image: hydraulicImage,
 
     shortDescription: "Industrial hydraulic solutions.",
 
@@ -23,7 +28,7 @@ const features = [
   {
     title: "Authorized Solutions",
 
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+    image: authorizedImage,
 
     shortDescription: "Trusted hydraulic partnerships.",
 
@@ -40,7 +45,7 @@ const features = [
   {
     title: "Suspension Excellence",
 
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+    image: suspensionImage,
 
     shortDescription: "Reliable suspension technology.",
 

@@ -2,10 +2,14 @@ import BusinessHero from "../../components/business/BusinessHero";
 import BusinessOverview from "../../components/business/BusinessOverview";
 import FeaturesGrid from "../../components/business/FeaturesGrid";
 
+import steelSupplyImage from "../../assets/images/services/steel/structural-steel-supply.webp"
+import bulkSteelImage from "../../assets/images/services/steel/bulk-steel.webp"
+import steelEngineeringImage from "../../assets/images/services/steel/steel-engineering.webp"
+
 const features = [
   {
     title: "Structural Steel Supply",
-    image: "https://unsplash.com/photos/construction-frame-P_qvsF7Yodw",
+    image: steelSupplyImage,
     shortDescription: "Premium steel distribution.",
     fullDescription:
       "Supplying high-quality structural steel products for industrial and infrastructure projects.",
@@ -19,7 +23,7 @@ const features = [
 
   {
     title: "Bulk Industrial Orders",
-    image: "BULK_STEEL_IMAGE",
+    image: bulkSteelImage,
     shortDescription: "Large-scale steel procurement.",
     fullDescription:
       "Reliable sourcing and distribution for large industrial requirements.",
@@ -33,7 +37,7 @@ const features = [
 
   {
     title: "Allied Engineering Support",
-    image: "ENGINEERING_STEEL_IMAGE",
+    image: steelEngineeringImage,
     shortDescription: "Technical steel solutions.",
     fullDescription:
       "Engineering support ensuring optimal steel selection and application.",

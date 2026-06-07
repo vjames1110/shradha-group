@@ -2,10 +2,14 @@ import BusinessHero from "../../components/business/BusinessHero";
 import FeaturesGrid from "../../components/business/FeaturesGrid";
 import { ArrowUpRight } from "lucide-react";
 
+import ddgsImage from "../../assets/images/services/cattlefeed/ddgs-cattlefeed.webp"
+import agriImage from "../../assets/images/services/cattlefeed/agriculture-commodities.webp"
+import feedImage from "../../assets/images/services/cattlefeed/sustainable-feed.webp"
+
 const features = [
   {
     title: "DDGS Feed Supply",
-    image: "DDGS_IMAGE",
+    image: ddgsImage,
     shortDescription: "High-quality cattle nutrition.",
     fullDescription:
       "Supplying premium DDGS feed products for healthy livestock development.",
@@ -19,7 +23,7 @@ const features = [
 
   {
     title: "Agricultural Commodities",
-    image: "AGRI_IMAGE",
+    image: agriImage,
     shortDescription: "Reliable commodity sourcing.",
     fullDescription:
       "Providing agricultural products supporting modern farming practices.",
@@ -33,7 +37,7 @@ const features = [
 
   {
     title: "Sustainable Feed Solutions",
-    image: "SUSTAINABLE_IMAGE",
+    image: feedImage,
     shortDescription: "Environmentally responsible nutrition.",
     fullDescription:
       "Promoting sustainable livestock growth through quality feed products.",
