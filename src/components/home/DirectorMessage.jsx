@@ -85,7 +85,7 @@ function DirectorMessage() {
               <p>
                 Through strategic growth, advanced engineering capabilities, and
                 customer satisfaction, we aim to create long-term sustainable
-                value for industries, businesses, and communities.
+                value for industries, services, and communities.
               </p>
             </div>
 

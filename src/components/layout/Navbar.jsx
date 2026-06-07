@@ -20,39 +20,37 @@ function Navbar() {
 
   const navLinkClass = ({ isActive }) =>
     `
-      relative
-      text-sm
-      uppercase
-      tracking-[2px]
-      font-medium
-      transition-all
-      duration-300
-      hover:text-primary
-      ${
-        isActive ? "text-primary" : isScrolled ? "text-slate-800" : "text-white"
-      }
-    `;
+    relative
+    text-sm
+    uppercase
+    tracking-[2px]
+    font-medium
+    transition-all
+    duration-300
+    ${isActive ? "text-[#0057B8]" : "text-[#2563eb]"}
+    hover:text-blue-800
+  `;
 
-  const businesses = [
+  const services = [
     {
       name: "Hydraulic Systems",
-      link: "/businesses/hydraulics",
+      link: "/services/hydraulics",
     },
     {
       name: "Steel Trading",
-      link: "/businesses/steel-trading",
+      link: "/servicecs/steel-trading",
     },
     {
       name: "Engineering Works",
-      link: "/businesses/engineering-works",
+      link: "/services/engineering-works",
     },
     {
       name: "Transport Services",
-      link: "/businesses/transport",
+      link: "/services/transport",
     },
     {
       name: "Cattle Feed Supply",
-      link: "/businesses/cattle-feed",
+      link: "/services/cattle-feed",
     },
   ];
 
@@ -85,14 +83,16 @@ function Navbar() {
           "
         >
           {/* LOGO */}
+          {/* LOGO */}
           <Link
             to="/"
             className="
     flex
     items-center
-    gap-2
+    gap-3
     shrink-0
     z-50
+    -ml-4
   "
           >
             <img
@@ -111,43 +111,27 @@ function Navbar() {
             <div
               className="
       hidden
-      sm:flex
-      flex-col
-      justify-center
-      translate-y-7.5
+      md:flex
+      items-center
+      ml-1
     "
             >
-              <span
+              <h1
                 className="
-        text-[1.6rem]
-        md:text-[1.9rem]
+        text-[2rem]
+        lg:text-[2.5rem]
+        xl:text-[3rem]
         font-extrabold
         tracking-wide
         text-[#0057B8]
-        leading-tight
+        whitespace-nowrap
       "
                 style={{
                   fontFamily: "Alice, serif",
                 }}
               >
-                SHRADHA
-              </span>
-
-              <span
-                className="
-        text-[1.6rem]
-        md:text-[1.9rem]
-        font-extrabold
-        tracking-wide
-        text-[#0057B8]
-        leading-tight
-      "
-                style={{
-                  fontFamily: "Alice, serif",
-                }}
-              >
-                GROUP
-              </span>
+                Shradha Group
+              </h1>
             </div>
           </Link>
 
@@ -175,31 +159,31 @@ function Navbar() {
                 About
               </NavLink>
 
-              {/* BUSINESSES */}
+              {/* services */}
               <div className="relative group">
                 <button
-                  className={`
-      flex
-      items-center
-      gap-2
-      text-sm
-      uppercase
-      tracking-[2px]
-      font-medium
-      transition-colors
-      duration-300
-      hover:text-primary
-      ${isScrolled ? "text-slate-800" : "text-white"}
-    `}
+                  className="
+    flex
+    items-center
+    gap-2
+    text-sm
+    uppercase
+    tracking-[2px]
+    font-medium
+    text-[#2563eb]
+    hover:text-[#0057B8]
+    transition-colors
+    duration-300
+  "
                 >
-                  Businesses
+                  services
                   <ChevronDown
                     size={16}
                     className="
-        transition-transform
-        duration-300
-        group-hover:rotate-180
-      "
+      transition-transform
+      duration-300
+      group-hover:rotate-180
+    "
                   />
                 </button>
 
@@ -233,7 +217,7 @@ function Navbar() {
       "
                   >
                     <div className="p-4">
-                      {businesses.map((item) => (
+                      {services.map((item) => (
                         <Link
                           key={item.link}
                           to={item.link}
@@ -334,11 +318,11 @@ function Navbar() {
           </NavLink>
 
           <NavLink
-            to="/businesses/hydraulics"
+            to="/services/hydraulics"
             className="text-xl"
             onClick={() => setIsOpen(false)}
           >
-            Businesses
+            Our Services
           </NavLink>
 
           <NavLink

@@ -186,7 +186,7 @@ function Contact() {
               className="
                 bg-white
                 rounded-[32px]
-                p-8
+                p-10
                 md:p-10
                 shadow-xl
                 border

@@ -94,24 +94,6 @@ function FeaturesGrid({ features }) {
                 "
               >
                 {/* BADGE */}
-                <span
-                  className="
-                    inline-block
-                    px-4
-                    py-2
-                    mb-5
-                    text-xs
-                    uppercase
-                    tracking-[3px]
-                    rounded-full
-                    bg-white/10
-                    border
-                    border-white/20
-                    backdrop-blur-xl
-                  "
-                >
-                  Shradha Group
-                </span>
 
                 {/* TITLE */}
                 <h3

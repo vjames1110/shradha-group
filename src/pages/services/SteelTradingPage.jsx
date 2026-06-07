@@ -5,7 +5,7 @@ import FeaturesGrid from "../../components/business/FeaturesGrid";
 const features = [
   {
     title: "Structural Steel Supply",
-    image: "STEEL_IMAGE",
+    image: "https://unsplash.com/photos/construction-frame-P_qvsF7Yodw",
     shortDescription: "Premium steel distribution.",
     fullDescription:
       "Supplying high-quality structural steel products for industrial and infrastructure projects.",

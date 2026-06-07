@@ -85,27 +85,6 @@ function HeroSection() {
                     }}
                   >
                     {/* BADGE */}
-                    <div
-                      className="
-                        inline-flex
-                        items-center
-                        gap-3
-                        px-5
-                        py-2
-                        rounded-full
-                        border
-                        border-white/20
-                        bg-white/10
-                        backdrop-blur-xl
-                        text-white
-                        text-sm
-                        uppercase
-                        tracking-[3px]
-                        mb-8
-                      "
-                    >
-                      Shradha Group
-                    </div>
 
                     {/* HEADING */}
                     <motion.h1

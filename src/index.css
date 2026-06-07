@@ -120,7 +120,7 @@
 
   @media (min-width: 1024px) {
     .container-custom {
-      padding-inline: 4rem;
+      padding-inline: 1rem;
     }
   }
 

@@ -134,7 +134,7 @@ function Footer() {
           {/* BUSINESSES */}
           <div>
             <h3 className="text-2xl mb-8">
-              Businesses
+              Our Services
             </h3>
 
             <div className="flex flex-col gap-4">

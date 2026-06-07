@@ -21,7 +21,7 @@ function ServiceSection() {
       <div className="container-custom">
         {/* HEADING */}
         <SectionHeading
-          subtitle="Our Businesses"
+          subtitle="Our Services"
           title="Diversified Industrial & Engineering Solutions"
           description="Shradha Group operates across multiple industrial sectors delivering reliable engineering, transport, hydraulic, steel, and agricultural solutions."
           align="center"
@@ -99,26 +99,6 @@ function ServiceSection() {
                       text-white
                     "
                   >
-                    <div
-                      className="
-                        inline-flex
-                        items-center
-                        px-4
-                        py-2
-                        rounded-full
-                       bg-white/10
-                        backdrop-blur-xl
-                        border
-                       border-white/20
-                       text-white
-                        text-xs
-                        uppercase
-                        tracking-[2px]
-                        mb-5
-                      "
-                    >
-                      Shradha Group
-                    </div>
 
                     {/* TITLE */}
                     <h3
