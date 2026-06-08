@@ -11,7 +11,7 @@ import cattleVideo from "../assets/videos/cattlefeed.mp4";
 const heroSlides = [
   {
     id: 1,
-    title: "Hydraulic & Suspension Solutions",
+    title: "Hydraulic & Axel",
 
     subtitle:
       "Authorized solutions for Wipro Hydraulics Systems and Hendrickson Excellence.",
@@ -51,7 +51,7 @@ const heroSlides = [
 
   {
     id: 5,
-    title: "DDGS & Agricultural Commodities",
+    title: "DDGS & Cattlefeed Supply",
 
     subtitle:
       "Sustainable agricultural commodities for a greener future.",

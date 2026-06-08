@@ -54,7 +54,7 @@ function CattleField() {
   return (
     <>
       <BusinessHero
-        title="DDGS Cattle Feed Supply"
+        title="DDGS & Cattle Feed Supply"
         subtitle="Reliable cattle feed solutions supporting modern agricultural and livestock operations."
         image="https://images.unsplash.com/photo-1500595046743-cd271d694d30"
         highlights={[

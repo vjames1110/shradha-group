@@ -64,7 +64,7 @@ function HydraulicsPage() {
   return (
     <>
       <BusinessHero
-        title="Hydraulic Systems & Services"
+        title="Hydraulics & Axel"
         subtitle="Industrial hydraulic and suspension solutions for modern engineering operations."
         image="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
         highlights={[
