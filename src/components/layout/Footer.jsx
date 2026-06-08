@@ -131,7 +131,7 @@ function Footer() {
             </div>
           </div>
 
-          {/* BUSINESSES */}
+          {/* Our Services */}
           <div>
             <h3 className="text-2xl mb-8">
               Our Services
@@ -141,23 +141,23 @@ function Footer() {
               {[
                 {
                   name: "Hydraulic Systems",
-                  link: "/business/hydraulics",
+                  link: "/services/hydraulics",
                 },
                 {
                   name: "Steel Trading",
-                  link: "/business/steel-trading",
+                  link: "/services/steel-trading",
                 },
                 {
                   name: "Engineering Works",
-                  link: "/business/engineering-works",
+                  link: "/services/engineering-works",
                 },
                 {
                   name: "Transport Services",
-                  link: "/business/transport",
+                  link: "/services/transport",
                 },
                 {
                   name: "Cattle Feed Supply",
-                  link: "/business/cattle-feed",
+                  link: "/services/cattle-feed",
                 },
               ].map((item) => (
                 <Link
