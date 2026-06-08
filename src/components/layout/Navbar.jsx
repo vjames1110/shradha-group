@@ -83,7 +83,6 @@ function Navbar() {
           "
         >
           {/* LOGO */}
-          {/* LOGO */}
           <Link
             to="/"
             className="
@@ -109,30 +108,31 @@ function Navbar() {
             />
 
             <div
-              className="
-      hidden
-      md:flex
-      items-center
-      ml-1
+  className="
+    hidden
+    md:flex
+    items-center
+    ml-4
+  "
+>
+  <h1
+    className="
+      text-[2rem]
+      lg:text-[2.6rem]
+      xl:text-[3.2rem]
+      font-bold
+      tracking-[0.18em]
+      text-[#0057B8]
+      whitespace-nowrap
+      leading-none
     "
-            >
-              <h1
-                className="
-        text-[2rem]
-        lg:text-[2.5rem]
-        xl:text-[3rem]
-        font-extrabold
-        tracking-wide
-        text-[#0057B8]
-        whitespace-nowrap
-      "
-                style={{
-                  fontFamily: "Alice, serif",
-                }}
-              >
-                Shradha Group
-              </h1>
-            </div>
+    style={{
+      fontFamily: "DM Sans, sans-serif",
+    }}
+  >
+    SHRADHA GROUP
+  </h1>
+</div>
           </Link>
 
           {/* DESKTOP NAV */}

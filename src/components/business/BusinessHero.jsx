@@ -49,9 +49,6 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="uppercase tracking-[5px] text-primary text-sm md:text-base">
-              Shradha Group
-            </span>
 
             <h1
               className="

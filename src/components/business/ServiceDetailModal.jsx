@@ -153,7 +153,7 @@ function ServiceDetailModal({
                       mb-4
                     "
                   >
-                    Shradha
+                    Shradha Group
                   </span>
 
                   <h2
