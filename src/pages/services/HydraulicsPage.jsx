@@ -6,6 +6,9 @@ import hydraulicImage from "../../assets/images/services/hydraulics/hydraulic-sy
 import authorizedImage from "../../assets/images/services/hydraulics/authorized-solutions.webp"
 import suspensionImage from "../../assets/images/services/hydraulics/suspension.webp"
 
+import wiproAuthorizedImage from "../../assets/images/services/hydraulics/wiproAuthorized.png";
+
+
 
 const features = [
   {
@@ -66,7 +69,7 @@ function HydraulicsPage() {
       <BusinessHero
         title="Hydraulics & Axel"
         subtitle="Industrial hydraulic and suspension solutions for modern engineering operations."
-        image="https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+        image={wiproAuthorizedImage}
         highlights={[
           "Wipro Authorized Solutions",
           "Hendrickson Excellence",

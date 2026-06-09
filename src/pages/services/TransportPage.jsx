@@ -6,6 +6,9 @@ import fleetImage from "../../assets/images/services/transport/fleet-trasnportat
 import panIndiaImage from "../../assets/images/services/transport/pan-India.webp"
 import scmImage from "../../assets/images/services/transport/supply-chain.webp"
 
+import transportImage from "../../assets/images/services/transport/transport.jpg";
+
+
 const features = [
   {
     title: "Fleet Transportation",
@@ -56,7 +59,7 @@ function TransportPage() {
       <BusinessHero
         title="Transport & Logistics Services"
         subtitle="Efficient industrial transport and logistics solutions supporting business continuity."
-        image="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3"
+        image={transportImage}
         highlights={[
           "Pan India Logistics",
           "On-Time Deliveries",

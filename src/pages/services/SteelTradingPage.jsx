@@ -6,6 +6,9 @@ import steelSupplyImage from "../../assets/images/services/steel/structural-stee
 import bulkSteelImage from "../../assets/images/services/steel/bulk-steel.webp"
 import steelEngineeringImage from "../../assets/images/services/steel/steel-engineering.webp"
 
+import steelTradingImage from "../../assets/images/services/steel/steel-trading.jpg";
+
+
 const features = [
   {
     title: "Structural Steel Supply",
@@ -56,7 +59,7 @@ function SteelTradingPage() {
       <BusinessHero
         title="Steel Trading & Allied Engineering"
         subtitle="Reliable industrial steel trading solutions supporting engineering and infrastructure growth."
-        image="https://images.unsplash.com/photo-1517048676732-d65bc937f952"
+        image={steelTradingImage}
         highlights={[
           "Steel Supply",
           "Bulk Industrial Supply",

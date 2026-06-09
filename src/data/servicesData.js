@@ -1,3 +1,9 @@
+import wiproAuthorizedImage from "../assets/images/services/hydraulics/wiproAuthorized.png";
+import steelTradingImage from "../assets/images/services/steel/steel-trading.jpg";
+import fabricationImage from "../assets/images/services/engineering/fabrication.jpg";
+import transportImage from "../assets/images/services/transport/transport.jpg";
+import cattlefeedImage from "../assets/images/services/cattlefeed/cattlefeed.jpg";
+
 const servicesData = [
   {
     id: 1,
@@ -7,7 +13,7 @@ const servicesData = [
     link: "/services/hydraulics",
 
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+      wiproAuthorizedImage,
   },
 
   {
@@ -18,7 +24,7 @@ const servicesData = [
     link: "/services/steel-trading",
 
     image:
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952",
+      steelTradingImage,
   },
 
   {
@@ -29,7 +35,7 @@ const servicesData = [
     link: "/services/engineering-works",
 
     image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122",
+      fabricationImage,
   },
 
   {
@@ -40,7 +46,7 @@ const servicesData = [
     link: "/services/transport",
 
     image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3",
+      transportImage,
   },
 
   {
@@ -51,7 +57,7 @@ const servicesData = [
     link: "/services/cattle-feed",
 
     image:
-      "https://images.unsplash.com/photo-1500595046743-cd271d694d30",
+      cattlefeedImage,
   },
 ];
 

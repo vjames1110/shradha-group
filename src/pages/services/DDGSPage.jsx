@@ -6,6 +6,8 @@ import ddgsImage from "../../assets/images/services/cattlefeed/ddgs-cattlefeed.w
 import agriImage from "../../assets/images/services/cattlefeed/agriculture-commodities.webp"
 import feedImage from "../../assets/images/services/cattlefeed/sustainable-feed.webp"
 
+import cattlefeedImage from "../../assets/images/services/cattlefeed/cattlefeed.jpg";
+
 const features = [
   {
     title: "DDGS Feed Supply",
@@ -56,7 +58,7 @@ function CattleField() {
       <BusinessHero
         title="DDGS & Cattle Feed Supply"
         subtitle="Reliable cattle feed solutions supporting modern agricultural and livestock operations."
-        image="https://images.unsplash.com/photo-1500595046743-cd271d694d30"
+        image={cattlefeedImage}
         highlights={[
           "High Quality DDGS",
           "Trusted Feed Supply",

@@ -6,6 +6,9 @@ import customFabricationImage from "../../assets/images/services/engineering/cus
 import precisionEngImage from "../../assets/images/services/engineering/precision-engineering.webp"
 import industrialProjectsImage from "../../assets/images/services/engineering/industrial-projects.webp"
 
+import fabricationImage from "../../assets/images/services/engineering/fabrication.jpg";
+
+
 const features = [
   {
     title: "Custom Fabrication",
@@ -56,7 +59,7 @@ function EngineeringWorks() {
       <BusinessHero
         title="Engineering & Fabrication Works"
         subtitle="Precision engineering and industrial fabrication solutions built for reliability and performance."
-        image="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122"
+        image={fabricationImage}
         highlights={[
           "Custom Fabrication",
           "Precision Engineering",
