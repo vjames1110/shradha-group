@@ -27,8 +27,8 @@ function Navbar() {
     font-medium
     transition-all
     duration-300
-    ${isActive ? "text-[#0057B8]" : "text-[#2563eb]"}
-    hover:text-blue-800
+    text-[#318da8]
+    hover:text-[#318da8]
   `;
 
   const services = [
@@ -69,7 +69,7 @@ function Navbar() {
           ${
             isScrolled
               ? "bg-white/95 backdrop-blur-xl shadow-lg border-b border-slate-200"
-              : "bg-slate-950/45 backdrop-blur-2xl border-b border-white/10"
+              : "bg-slate-950/80 backdrop-blur-2xl border-b border-white/10"
           }
         `}
       >
@@ -122,7 +122,7 @@ function Navbar() {
       xl:text-[3.2rem]
       font-bold
       tracking-[0.18em]
-      text-[#0057B8]
+      text-[#318da8]
       whitespace-nowrap
       leading-none
     "
@@ -170,7 +170,7 @@ function Navbar() {
     uppercase
     tracking-[2px]
     font-medium
-    text-[#2563eb]
+    text-[#318da8]
     hover:text-[#0057B8]
     transition-colors
     duration-300
@@ -302,16 +302,20 @@ function Navbar() {
               border-slate-200
             "
           >
-            SHRADHA <span className="text-[#0057B8]">GROUP</span>
+            SHRADHA <span className="text-[#318da8]">GROUP</span>
           </h2>
 
-          <NavLink to="/" className="text-xl" onClick={() => setIsOpen(false)}>
+          <NavLink
+            to="/"
+            className="text-xl text-[#318da8]"
+            onClick={() => setIsOpen(false)}
+          >
             Home
           </NavLink>
 
           <NavLink
             to="/about"
-            className="text-xl"
+            className="text-xl text-[#318da8]"
             onClick={() => setIsOpen(false)}
           >
             About
@@ -319,7 +323,7 @@ function Navbar() {
 
           <NavLink
             to="/services/hydraulics"
-            className="text-xl"
+            className="text-xl text-[#318da8]"
             onClick={() => setIsOpen(false)}
           >
             Our Services
@@ -327,7 +331,7 @@ function Navbar() {
 
           <NavLink
             to="/contact"
-            className="text-xl"
+            className="text-xl text-[#318da8]"
             onClick={() => setIsOpen(false)}
           >
             Contact
