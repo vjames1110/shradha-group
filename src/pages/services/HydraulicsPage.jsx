@@ -1,88 +1,36 @@
+import HydraulicSolutions from "../../components/business/hydraulics/HydraulicSolutions"
+
 import BusinessHero from "../../components/business/BusinessHero";
 import BusinessOverview from "../../components/business/BusinessOverview";
-import FeaturesGrid from "../../components/business/FeaturesGrid";
 
-import hydraulicImage from "../../assets/images/services/hydraulics/hydraulic-system.webp"
-import authorizedImage from "../../assets/images/services/hydraulics/authorized-solutions.webp"
-import suspensionImage from "../../assets/images/services/hydraulics/suspension.webp"
+// import hydraulicImage from "../../assets/images/services/hydraulics/hydraulic-system.webp"
+// import authorizedImage from "../../assets/images/services/hydraulics/authorized-solutions.webp"
+// import suspensionImage from "../../assets/images/services/hydraulics/suspension.webp"
 
 import hydraulicHeroImage from "../../assets/images/services/hydraulics/hydraulic-system.webp"
 
 
 
-const features = [
-  {
-    title: "Hydraulic Systems",
-
-    image: hydraulicImage,
-
-    shortDescription: "Industrial hydraulic solutions.",
-
-    fullDescription:
-      "Advanced hydraulic systems designed for heavy industrial applications, ensuring efficiency, reliability, and operational excellence.",
-
-    applications: [
-      "Mining Equipment",
-      "Manufacturing Plants",
-      "Infrastructure Projects",
-    ],
-  },
-
-  {
-    title: "Authorized Solutions",
-
-    image: authorizedImage,
-
-    shortDescription: "Trusted hydraulic partnerships.",
-
-    fullDescription:
-      "Authorized hydraulic support and engineering solutions backed by trusted industrial partnerships.",
-
-    applications: [
-      "OEM Support",
-      "Industrial Operations",
-      "Technical Services",
-    ],
-  },
-
-  {
-    title: "Suspension Excellence",
-
-    image: suspensionImage,
-
-    shortDescription: "Reliable suspension technology.",
-
-    fullDescription:
-      "Premium suspension solutions enhancing vehicle stability and operational performance.",
-
-    applications: [
-      "Commercial Vehicles",
-      "Heavy Equipment",
-      "Logistics Fleets",
-    ],
-  },
-];
-
 function HydraulicsPage() {
   return (
     <>
       <BusinessHero
-        title="Hydraulics & Axel"
+        title="Hydraulics Sytems & Solutions"
         subtitle="Industrial hydraulic and suspension solutions for modern engineering operations."
         image={hydraulicHeroImage}
         highlights={[
-          "Wipro Authorized Solutions",
-          "Hendrickson Excellence",
-          "24/7 Technical Support",
+          "Wipro Hydraulic Systems",
+          "40+ Service Locations",
+          "Genuine Spare Parts",
         ]}
       />
 
       <BusinessOverview
         heading="Industrial Hydraulic Excellence"
-        description="Shradha Group delivers reliable hydraulic systems and industrial engineering support through trusted partnerships and high-quality technical expertise tailored for modern industrial applications."
+        description="Shradha Group provides complete hydraulic tipping solutions including Wipro Tipping Kits, hydraulic spare parts, installation support, maintenance services and nationwide service assistance. Our solutions are trusted across mining, infrastructure, construction, fly ash transportation, coal logistics and commercial transportation industries."
       />
 
-      <FeaturesGrid features={features} />
+      <HydraulicSolutions />
     </>
   );
 }
