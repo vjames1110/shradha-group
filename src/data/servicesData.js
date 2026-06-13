@@ -1,7 +1,7 @@
 import wiproAuthorizedImage from "../assets/images/services/hydraulics/wiproAuthorized.png";
 import steelTradingImage from "../assets/images/services/steel/steel-trading.jpg";
 import fabricationImage from "../assets/images/services/engineering/fabrication.jpg";
-import transportImage from "../assets/images/services/transport/transport.jpg";
+import transportImage from "../assets/images/services/transport/truckService.png";
 import cattlefeedImage from "../assets/images/services/cattlefeed/cattlefeed.jpg";
 
 const servicesData = [

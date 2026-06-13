@@ -10,11 +10,11 @@ import cattlefeedImage from "../../assets/images/services/cattlefeed/cattlefeed.
 
 const features = [
   {
-    title: "DDGS Feed Supply",
+    title: "DDGS Supply",
     image: ddgsImage,
     shortDescription: "High-quality cattle nutrition.",
     fullDescription:
-      "Supplying premium DDGS feed products for healthy livestock development.",
+      "Supplying premium DDGS products for healthy livestock development.",
 
     applications: [
       "Dairy Farms",

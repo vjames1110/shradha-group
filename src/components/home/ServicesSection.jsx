@@ -11,6 +11,7 @@ import { fadeUp, staggerContainer } from "../../utils/motionVariants";
 function ServiceSection() {
   return (
     <section
+      id="services"
       className="
               section-padding
               bg-gradient-to-b

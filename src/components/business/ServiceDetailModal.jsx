@@ -136,25 +136,6 @@ function ServiceDetailModal({
                     right-8
                   "
                 >
-                  <span
-                    className="
-                      inline-block
-                      px-4
-                      py-2
-                      rounded-full
-                      bg-white/10
-                      backdrop-blur-xl
-                      border
-                      border-white/20
-                      text-white
-                      text-xs
-                      uppercase
-                      tracking-[3px]
-                      mb-4
-                    "
-                  >
-                    Shradha Group
-                  </span>
 
                   <h2
                     className="
