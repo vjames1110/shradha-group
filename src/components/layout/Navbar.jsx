@@ -18,7 +18,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinkClass = ({ isActive }) =>
+  const navLinkClass = () =>
     `
     relative
     text-sm
@@ -38,7 +38,7 @@ function Navbar() {
     },
     {
       name: "Steel Trading",
-      link: "/servicecs/steel-trading",
+      link: "/services/steel-trading",
     },
     {
       name: "Engineering Works",
@@ -76,7 +76,7 @@ function Navbar() {
         <div
           className="
             container-custom
-            h-32
+            h-24 lg:h-28
             flex
             items-center
             justify-between
@@ -98,10 +98,9 @@ function Navbar() {
               src={logo}
               alt="Shradha Group"
               className="
-      h-20
-      sm:h-24
-      lg:h-28
-      xl:h-32
+      h-16
+      sm:h-20
+      lg:h-24
       w-auto
       object-contain
     "
@@ -117,9 +116,9 @@ function Navbar() {
 >
   <h1
     className="
-      text-[2rem]
-      lg:text-[2.6rem]
-      xl:text-[3.2rem]
+      text-[1.7rem]
+      lg:text-[2rem]
+      xl:text-[2.35rem]
       font-bold
       tracking-[0.18em]
       text-[#318da8]
@@ -127,7 +126,7 @@ function Navbar() {
       leading-none
     "
     style={{
-      fontFamily: "DM Sans, sans-serif",
+      fontFamily: "Inter, sans-serif",
     }}
   >
     SHRADHA GROUP
@@ -148,7 +147,7 @@ function Navbar() {
               className="
                 flex
                 items-center
-                gap-14
+                gap-9 xl:gap-12
               "
             >
               <NavLink to="/" className={navLinkClass}>
@@ -194,7 +193,7 @@ function Navbar() {
       left-1/2
       -translate-x-1/2
       pt-4
-      w-[340px]
+      w-85
       opacity-0
       invisible
       translate-y-2
@@ -227,7 +226,7 @@ function Navbar() {
               py-4
               rounded-2xl
               text-slate-700
-              hover:bg-gradient-to-r
+              hover:bg-linear-to-r
               hover:from-blue-50
               hover:to-violet-50
               hover:text-[#0057B8]
@@ -250,6 +249,9 @@ function Navbar() {
 
           {/* MOBILE BUTTON */}
           <button
+            type="button"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
             className={`
               lg:hidden
               relative
@@ -273,7 +275,7 @@ function Navbar() {
           top-0
           right-0
           h-screen
-          w-[280px]
+          w-70
           sm:w-[320px]
           bg-white
           z-40
@@ -288,7 +290,7 @@ function Navbar() {
           className="
             flex
             flex-col
-            pt-32
+            pt-28
             px-8
             gap-8
           "
@@ -321,13 +323,16 @@ function Navbar() {
             About
           </NavLink>
 
-          <NavLink
-            to="/services/hydraulics"
-            className="text-xl text-[#318da8]"
-            onClick={() => setIsOpen(false)}
-          >
-            Our Services
-          </NavLink>
+          <div className="border-y border-slate-100 py-5">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Our Services</p>
+            <div className="flex flex-col gap-3">
+              {services.map((item) => (
+                <NavLink key={item.link} to={item.link} className="text-base text-[#318da8]" onClick={() => setIsOpen(false)}>
+                  {item.name}
+                </NavLink>
+              ))}
+            </div>
+          </div>
 
           <NavLink
             to="/contact"

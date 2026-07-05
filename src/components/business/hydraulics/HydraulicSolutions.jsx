@@ -22,7 +22,7 @@ function HydraulicSolutions() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {hydraulicSolutions.map((item) => (
               <motion.div
                 key={item.id}
@@ -31,9 +31,9 @@ function HydraulicSolutions() {
                 onClick={() => setSelectedItem(item)}
                 className="
                   relative
-                  h-[500px]
+                  min-h-[430px] lg:min-h-[500px]
                   overflow-hidden
-                  rounded-[36px]
+                  rounded-[28px]
                   cursor-pointer
                   group
                   shadow-[0_20px_60px_rgba(0,0,0,0.12)]
@@ -58,9 +58,9 @@ function HydraulicSolutions() {
                   className="
                     absolute
                     inset-0
-                    bg-gradient-to-t
-                    from-[#0f172a]/95
-                    via-[#1e3a8a]/40
+                    bg-linear-to-t
+                    from-[#071326]/98
+                    via-[#123d72]/45
                     to-transparent
                   "
                 />
@@ -75,7 +75,7 @@ function HydraulicSolutions() {
                     text-white
                   "
                 >
-                  <h3 className="text-3xl mb-4">
+                  <h3 className="text-2xl md:text-3xl text-white mb-4">
                     {item.title}
                   </h3>
 

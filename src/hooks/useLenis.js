@@ -8,15 +8,21 @@ function useLenis() {
       duration: 1.2,
     });
 
+    window.__shradhaLenis = lenis;
+
+    let frameId;
+
     function raf(time) {
       lenis.raf(time);
-      requestAnimationFrame(raf);
+      frameId = requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf);
+    frameId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(frameId);
       lenis.destroy();
+      delete window.__shradhaLenis;
     };
   }, []);
 }

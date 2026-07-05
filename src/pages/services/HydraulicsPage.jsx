@@ -15,7 +15,7 @@ function HydraulicsPage() {
   return (
     <>
       <BusinessHero
-        title="Hydraulics Sytems & Solutions"
+        title="Hydraulics Systems & Solutions"
         subtitle="Industrial hydraulic and suspension solutions for modern engineering operations."
         image={hydraulicHeroImage}
         highlights={[

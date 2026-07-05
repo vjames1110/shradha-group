@@ -51,10 +51,10 @@ function HeroSection() {
                 className="
                   absolute
                   inset-0
-                  bg-gradient-to-r
+                  bg-linear-to-r
                   from-[#0f172a]/65
                   via-[#1e3a8a]/40
-                  to-[#7c3aed]/20
+                  to-secondary/20
                 "
               />
 
@@ -147,7 +147,7 @@ function HeroSection() {
                           rounded-full
                          text-white
                           font-medium
-                          bg-gradient-to-r
+                          bg-linear-to-r
                          from-blue-600
                          via-blue-500
                          to-violet-600
@@ -184,12 +184,12 @@ function HeroSection() {
 
                     {/* BOTTOM ACCENT */}
                     <div
-                      className="
+                      className="cultu
                         mt-16
                         w-32
-                        h-[4px]
+                        h-1
                         rounded-full
-                        bg-gradient-to-r
+                        bg-linear-to-r
                         from-blue-500
                         via-violet-500
                         to-purple-500

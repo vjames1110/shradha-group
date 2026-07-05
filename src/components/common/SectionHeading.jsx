@@ -1,7 +1,7 @@
 function SectionHeading({
     subtitle,
     title,
-    descritpion,
+    description,
     align = "left",
 }) {
     return (
@@ -10,7 +10,8 @@ function SectionHeading({
             ${align === "center" ? "mx-auto text-center" : ""}`
         }
         >
-            <span className="uppercase tracking-[4px] text-primary text-sm font-medium">
+            <span className="inline-flex items-center gap-3 uppercase tracking-[0.22em] text-primary text-xs font-semibold">
+                <span className="h-px w-8 bg-primary/60" />
                 {subtitle}
             </span>
 
@@ -24,9 +25,7 @@ function SectionHeading({
                    {title} 
             </h2>
 
-            <p className="text-mutedtext-lg leading-relaxed">
-                {descritpion}
-            </p>
+            {description && <p className="text-muted text-lg leading-relaxed">{description}</p>}
         </div>
     );
 }

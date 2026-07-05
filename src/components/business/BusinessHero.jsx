@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function BusinessHero({ title, subtitle, image, highlights = [] }) {
   return (
-    <section className="relative h-[85vh] min-h-[700px] overflow-hidden">
+    <section className="relative h-[88svh] min-h-[620px] overflow-hidden bg-slate-950">
       {/* IMAGE */}
       <img
         src={image}
@@ -21,11 +21,11 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
         className="
     absolute
     inset-0
-    bg-gradient-to-r
-    from-[#f8f6f2]/95
-    via-[#f8f6f2]/80
-    via-40%
-    to-black/20
+    bg-linear-to-r
+    from-[#071326]/92
+    via-[#0b2850]/68
+    via-55%
+    to-black/25
   "
       />
 
@@ -33,7 +33,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
         className="
     absolute
     inset-0
-    bg-gradient-to-t
+    bg-linear-to-t
     from-black/20
     via-transparent
     to-transparent
@@ -44,7 +44,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
       <div className="relative z-10 h-full flex items-center">
         <div className="container-custom">
           <motion.div
-            className="max-w-4xl text-[#1a1a1a]"
+            className="max-w-4xl text-white pt-24"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -52,10 +52,10 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
 
             <h1
               className="
-                text-5xl
+                text-4xl
                 sm:text-6xl
                 md:text-7xl
-                lg:text-[5.5rem]
+                lg:text-[5rem]
                 leading-[1.05]
                 mt-6
                 mb-6
@@ -68,7 +68,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
               className="
                 text-lg
                 md:text-xl
-                text-black/70
+                text-white/78
                 max-w-2xl
                 leading-relaxed
               "
@@ -82,9 +82,9 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
     h-1
     mt-8
     rounded-full
-    bg-gradient-to-r
-    from-primary
-    to-yellow-300
+    bg-linear-to-r
+    from-cyan-400
+    to-blue-500
   "
             />
 
@@ -105,11 +105,11 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
                     scale: 1.03,
                   }}
                   className="
-        bg-white/75
+        bg-white/10
         backdrop-blur-xl
         border
-        border-white/60
-        rounded-3xl
+        border-white/20
+        rounded-2xl
         px-5
         py-4
         shadow-[0_15px_50px_rgba(0,0,0,0.12)]
@@ -119,7 +119,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
                     className="
           text-sm
           font-medium
-          text-black/80
+          text-white/90
         "
                   >
                     {item}

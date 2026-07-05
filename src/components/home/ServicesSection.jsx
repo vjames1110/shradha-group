@@ -14,7 +14,7 @@ function ServiceSection() {
       id="services"
       className="
               section-padding
-              bg-gradient-to-b
+              bg-linear-to-b
               from-white
               via-blue-50
               to-violet-50"
@@ -38,7 +38,7 @@ function ServiceSection() {
             grid
             sm:grid-cols-2
             lg:grid-cols-3
-            gap-8
+            gap-6 lg:gap-8
           "
         >
           {servicesData.map((service) => (
@@ -48,13 +48,13 @@ function ServiceSection() {
                   className="
                     relative
                     overflow-hidden
-                    rounded-[32px]
-                    h-[500px]
+                    rounded-[28px]
+                    h-[460px] lg:h-[500px]
                     border
                     border-white/20
                     shadow-xl
                     backdrop-blur-xl
-                    group-hover: shadow-[0_30px_80px_rgba(59,130,246,0.25)]
+                    group-hover:shadow-[0_30px_80px_rgba(59,130,246,0.25)]
                     transition-all
                     duration-500
                   "
@@ -80,7 +80,7 @@ function ServiceSection() {
                     className="
                       absolute
                       inset-0
-                      bg-gradient-to-t
+                      bg-linear-to-t
                       from-slate-950/95
                       via-slate-900/50
                       to-transparent
@@ -96,7 +96,7 @@ function ServiceSection() {
                       flex
                       flex-col
                       justify-end
-                      p-8
+                      p-6 md:p-8
                       text-white
                     "
                   >
@@ -142,7 +142,7 @@ function ServiceSection() {
                          border-white/20
                          bg-white/10
                           backdrop-blur-xl
-                          group-hover:bg-gradient-to-r
+                          group-hover:bg-linear-to-r
                          group-hover:from-blue-600
                          group-hover:to-violet-600
                           transition-all

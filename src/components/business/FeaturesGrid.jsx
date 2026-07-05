@@ -8,7 +8,7 @@ function FeaturesGrid({ features }) {
     useState(null);
 
   return (
-    <section className="pb-32 bg-gradient-soft">
+    <section className="relative overflow-hidden pb-24 md:pb-32 bg-gradient-soft">
       <div className="container-custom">
 
         <div
@@ -16,7 +16,7 @@ function FeaturesGrid({ features }) {
             grid
             sm:grid-cols-2
             lg:grid-cols-3
-            gap-8
+            gap-6 lg:gap-8
           "
         >
           {features.map((feature, index) => (
@@ -34,9 +34,9 @@ function FeaturesGrid({ features }) {
               className="
                 group
                 relative
-                h-[450px]
+                min-h-[430px] lg:min-h-[470px]
                 overflow-hidden
-                rounded-[32px]
+                rounded-[28px]
                 cursor-pointer
                 shadow-soft
               "
@@ -62,9 +62,9 @@ function FeaturesGrid({ features }) {
                 className="
                   absolute
                   inset-0
-                  bg-gradient-to-t
-                  from-[#0f172a]/95
-                  via-[#1e3a8a]/45
+                  bg-linear-to-t
+                  from-[#071326]/98
+                  via-[#123d72]/48
                   to-transparent
                 "
               />
@@ -89,7 +89,7 @@ function FeaturesGrid({ features }) {
                   bottom-0
                   left-0
                   w-full
-                  p-8
+                  p-6 md:p-8
                   text-white
                 "
               >
@@ -98,7 +98,7 @@ function FeaturesGrid({ features }) {
                 {/* TITLE */}
                 <h3
                   className="
-                    text-3xl
+                    text-2xl md:text-3xl text-white
                     mb-4
                   "
                 >
@@ -128,7 +128,7 @@ function FeaturesGrid({ features }) {
                     transition-all
                   "
                 >
-                  Learn More
+                  View details
 
                   <span
                     className="
@@ -146,7 +146,7 @@ function FeaturesGrid({ features }) {
                 className="
                   absolute
                   inset-0
-                  rounded-[32px]
+                  rounded-[28px]
                   border
                   border-white/10
                   group-hover:border-blue-400/40

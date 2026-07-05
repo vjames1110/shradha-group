@@ -72,6 +72,7 @@ function Footer() {
                 <a
                   key={index}
                   href="#"
+                  aria-label={["Facebook", "Instagram", "LinkedIn"][index]}
                   className="
                     w-12
                     h-12

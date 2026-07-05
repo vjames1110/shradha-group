@@ -102,7 +102,7 @@ function StatCard({ item, index }) {
         className="
           absolute
           inset-0
-          bg-gradient-to-br
+          bg-linear-to-br
           from-primary/10
           to-transparent
           pointer-events-none

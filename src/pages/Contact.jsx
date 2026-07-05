@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Building2 } from "lucide-react";
 
 function Contact() {
   return (
-    <section className="pt-40 pb-28 bg-gradient-to-br from-slate-50 via-white to-blue-50 min-h-screen">
+    <section className="pt-40 pb-28 bg-linear-to-br from-slate-50 via-white to-blue-50 min-h-screen">
       <div className="container-custom">
         {/* HERO */}
         <motion.div
@@ -146,11 +146,11 @@ function Contact() {
             <div
               className="
                 mt-8
-                bg-gradient-to-br
+                bg-linear-to-br
                 from-blue-600
                 to-violet-600
                 text-white
-                rounded-[32px]
+                rounded-4xl
                 p-8
               "
             >
@@ -195,7 +195,7 @@ function Contact() {
             >
               <h2 className="text-3xl mb-8">Send Us An Inquiry</h2>
 
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={(event) => event.preventDefault()}>
                 <div
                   className="
                     grid
@@ -204,6 +204,7 @@ function Contact() {
                   "
                 >
                   <input
+                    aria-label="Full name"
                     type="text"
                     placeholder="Full Name"
                     className="
@@ -218,6 +219,7 @@ function Contact() {
                   />
 
                   <input
+                    aria-label="Email address"
                     type="email"
                     placeholder="Email Address"
                     className="
@@ -233,6 +235,7 @@ function Contact() {
                 </div>
 
                 <input
+                  aria-label="Company name"
                   type="text"
                   placeholder="Company Name"
                   className="
@@ -251,6 +254,7 @@ function Contact() {
                 </p>
 
                 <select
+                  aria-label="Business division"
                   className="
                     w-full
                     h-14
@@ -281,6 +285,7 @@ function Contact() {
                 </select>
 
                 <textarea
+                  aria-label="Your message"
                   rows="6"
                   placeholder="Your Message"
                   className="
@@ -302,7 +307,7 @@ function Contact() {
                     rounded-full
                     text-white
                     font-medium
-                    bg-gradient-to-r
+                    bg-linear-to-r
                     from-blue-600
                     to-violet-600
                     hover:scale-105

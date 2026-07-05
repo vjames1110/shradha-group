@@ -1,9 +1,10 @@
 function About() {
   return (
-    <section className="min-h-screen pt-32 section-padding">
+    <section className="relative min-h-screen overflow-hidden bg-linear-to-br from-slate-50 via-white to-blue-50 pt-40 pb-28">
+      <div className="absolute right-0 top-20 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl" />
       <div className="container-custom">
         {/* Heading */}
-        <div className="max-w-4xl mb-16">
+        <div className="relative max-w-4xl mb-16">
           <span className="text-primary uppercase tracking-[4px] text-sm font-medium">
             About Shradha Group
           </span>
@@ -26,7 +27,7 @@ function About() {
         {/* Grid */}
         <div className="grid lg:grid-cols-2 gap-10">
           {/* Vision */}
-          <div className="bg-white rounded-[24px] p-10 shadow-soft border border-black/5">
+          <div className="bg-white/90 rounded-[28px] p-8 md:p-10 shadow-soft border border-blue-100/70">
             <h2 className="text-3xl mb-6">
               Our Vision
             </h2>
@@ -39,7 +40,7 @@ function About() {
           </div>
 
           {/* Mission */}
-          <div className="bg-white rounded-[24px] p-10 shadow-soft border border-black/5">
+          <div className="bg-white/90 rounded-[28px] p-8 md:p-10 shadow-soft border border-blue-100/70">
             <h2 className="text-3xl mb-6">
               Our Mission
             </h2>

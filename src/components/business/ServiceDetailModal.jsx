@@ -1,262 +1,67 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { X, CheckCircle } from "lucide-react";
+import { useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowUpRight, CheckCircle2, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
-function ServiceDetailModal({
-  isOpen,
-  onClose,
-  feature,
-}) {
-  if (!feature) return null;
+function ServiceDetailModal({ isOpen, onClose, feature }) {
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const closeOnEscape = (event) => event.key === "Escape" && onClose();
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [isOpen, onClose]);
 
   return (
     <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* BACKDROP */}
-          <motion.div
+      {isOpen && feature && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-label={`${feature.title} details`}>
+          <motion.button
+            type="button"
+            aria-label="Close service details"
+            className="absolute inset-0 bg-slate-950/75 backdrop-blur-sm"
+            onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={onClose}
-            className="
-              fixed
-              inset-0
-              bg-[#0f172a]/70
-              backdrop-blur-lg
-              z-[100]
-            "
           />
-
-          {/* MODAL */}
           <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.92,
-              y: 40,
-            }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: 0,
-            }}
-            exit={{
-              opacity: 0,
-              scale: 0.92,
-              y: 40,
-            }}
-            transition={{
-              duration: 0.35,
-            }}
-            className="
-              fixed
-              top-1/2
-              left-1/2
-              -translate-x-1/2
-              -translate-y-1/2
-              z-[110]
-              w-[95%]
-              max-w-5xl
-              max-h-[90vh]
-            "
+            initial={{ opacity: 0, y: 24, scale: 0.97 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 16, scale: 0.98 }}
+            className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-[28px] bg-white shadow-2xl"
           >
-            <div
-              className="
-                bg-white
-                rounded-[36px]
-                overflow-hidden
-                shadow-[0_30px_80px_rgba(0,0,0,0.25)]
-                max-h-[90vh]
-                overflow-y-auto
-              "
-            >
-              {/* HERO IMAGE */}
-              <div className="relative h-[340px]">
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="
-                    w-full
-                    h-full
-                    object-cover
-                  "
-                />
-
-                {/* OVERLAY */}
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-gradient-to-t
-                    from-[#0f172a]/90
-                    via-[#1e3a8a]/30
-                    to-transparent
-                  "
-                />
-
-                {/* GLOW */}
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.30),transparent_35%),radial-gradient(circle_at_top_right,rgba(124,58,237,0.30),transparent_35%)]
-                  "
-                />
-
-                {/* CLOSE BUTTON */}
-                <button
-                  onClick={onClose}
-                  className="
-                    absolute
-                    top-6
-                    right-6
-                    w-12
-                    h-12
-                    rounded-full
-                    bg-white/20
-                    backdrop-blur-xl
-                    border
-                    border-white/20
-                    flex
-                    items-center
-                    justify-center
-                    text-white
-                    hover:bg-white/30
-                    transition-all
-                  "
-                >
-                  <X size={22} />
-                </button>
-
-                {/* TITLE OVER IMAGE */}
-                <div
-                  className="
-                    absolute
-                    bottom-8
-                    left-8
-                    right-8
-                  "
-                >
-
-                  <h2
-                    className="
-                      text-white
-                      text-4xl
-                      md:text-5xl
-                    "
-                  >
-                    {feature.title}
-                  </h2>
-                </div>
+            <div className="grid md:grid-cols-[0.9fr_1.1fr]">
+              <div className="h-64 overflow-hidden md:h-auto md:min-h-[500px]">
+                <img src={feature.image} alt={feature.title} className="h-full w-full object-cover" />
               </div>
-
-              {/* CONTENT */}
-              <div className="p-8 lg:p-10">
-                {/* DESCRIPTION */}
-                <p
-                  className="
-                    text-slate-600
-                    text-lg
-                    leading-relaxed
-                    mb-10
-                  "
-                >
-                  {feature.fullDescription}
-                </p>
-
-                {/* APPLICATIONS */}
-                <div>
-                  <h3
-                    className="
-                      text-2xl
-                      mb-6
-                    "
-                  >
-                    Applications
-                  </h3>
-
-                  <div
-                    className="
-                      flex
-                      flex-wrap
-                      gap-4
-                    "
-                  >
-                    {feature.applications?.map(
-                      (item, index) => (
-                        <div
-                          key={index}
-                          className="
-                            flex
-                            items-center
-                            gap-2
-                            px-5
-                            py-3
-                            rounded-full
-                            bg-gradient-to-r
-                            from-blue-50
-                            to-violet-50
-                            border
-                            border-blue-100
-                          "
-                        >
-                          <CheckCircle
-                            size={18}
-                            className="text-blue-600"
-                          />
-
-                          <span className="text-slate-700">
-                            {item}
-                          </span>
-                        </div>
-                      )
-                    )}
+              <div className="p-7 md:p-10">
+                <button type="button" aria-label="Close" onClick={onClose} className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-700 hover:bg-slate-200">
+                  <X size={19} />
+                </button>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Service Solution</span>
+                <h2 className="mt-4 pr-10 text-3xl md:text-4xl">{feature.title}</h2>
+                <p className="mt-5 leading-7 text-slate-600">{feature.fullDescription}</p>
+                {feature.applications?.length > 0 && (
+                  <div className="mt-7 space-y-3">
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.14em] text-slate-400">Applications</h3>
+                    {feature.applications.map((item) => (
+                      <div key={item} className="flex items-center gap-3 text-sm text-slate-700">
+                        <CheckCircle2 size={18} className="shrink-0 text-primary" />{item}
+                      </div>
+                    ))}
                   </div>
-                </div>
-
-                {/* CTA */}
-                <div
-                  className="
-                    mt-10
-                    flex
-                    flex-wrap
-                    gap-4
-                  "
-                >
-                  <button
-                    className="
-                      px-8
-                      py-4
-                      rounded-full
-                      text-white
-                      font-medium
-                      bg-gradient-to-r
-                      from-blue-600
-                      to-violet-600
-                      hover:scale-105
-                      transition-all
-                    "
-                  >
-                    Contact Us
-                  </button>
-
-                  <button
-                    onClick={onClose}
-                    className="
-                      px-8
-                      py-4
-                      rounded-full
-                      border
-                      border-slate-200
-                      hover:bg-slate-50
-                    "
-                  >
-                    Close
-                  </button>
-                </div>
+                )}
+                <Link to="/contact" onClick={onClose} className="mt-9 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white hover:bg-primary-dark">
+                  Discuss your requirement <ArrowUpRight size={17} />
+                </Link>
               </div>
             </div>
           </motion.div>
-        </>
+        </div>
       )}
     </AnimatePresence>
   );
