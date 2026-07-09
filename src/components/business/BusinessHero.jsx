@@ -13,6 +13,9 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
           w-full
           h-full
           object-cover
+          brightness-[1.1]
+          contrast-[1.08]
+          saturate-[1.12]
         "
       />
 
@@ -22,10 +25,10 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
     absolute
     inset-0
     bg-linear-to-r
-    from-[#071326]/92
-    via-[#0b2850]/68
-    via-55%
-    to-black/25
+    from-[#071326]/64
+    via-[#0b2850]/30
+    via-48%
+    to-transparent
   "
       />
 
@@ -34,7 +37,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
     absolute
     inset-0
     bg-linear-to-t
-    from-black/20
+    from-black/12
     via-transparent
     to-transparent
   "
@@ -59,6 +62,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
                 leading-[1.05]
                 mt-6
                 mb-6
+                drop-shadow-[0_4px_24px_rgba(0,0,0,0.48)]
               "
             >
               {title}
@@ -71,6 +75,7 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
                 text-white/78
                 max-w-2xl
                 leading-relaxed
+                drop-shadow-[0_3px_16px_rgba(0,0,0,0.44)]
               "
             >
               {subtitle}

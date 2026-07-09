@@ -38,9 +38,9 @@ function HeroSection() {
                   w-full
                   h-full
                   object-cover
-                  brightness-[1.08]
-                  contrast-[1.15]
-                  saturate-[1.2]
+                  brightness-[1.12]
+                  contrast-[1.08]
+                  saturate-[1.12]
                 "
               >
                 <source src={slide.video} type="video/mp4" />
@@ -52,9 +52,9 @@ function HeroSection() {
                   absolute
                   inset-0
                   bg-linear-to-r
-                  from-[#0f172a]/65
-                  via-[#1e3a8a]/40
-                  to-secondary/20
+                  from-[#071326]/42
+                  via-[#0b2850]/16
+                  to-transparent
                 "
               />
 
@@ -63,7 +63,7 @@ function HeroSection() {
                 className="
                   absolute
                   inset-0
-                  bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.35),transparent_40%),radial-gradient(circle_at_bottom_right,rgba(124,58,237,0.30),transparent_40%)]
+                  bg-[radial-gradient(circle_at_top_left,rgba(7,19,38,0.22),transparent_42%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.10),transparent_45%)]
                 "
               />
 
@@ -105,6 +105,7 @@ function HeroSection() {
                         leading-[1.05]
                         mb-8
                         max-w-5xl
+                        drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]
                       "
                     >
                       {slide.title}
@@ -118,6 +119,7 @@ function HeroSection() {
                         md:text-xl
                         leading-relaxed
                         max-w-3xl
+                        drop-shadow-[0_3px_16px_rgba(0,0,0,0.42)]
                       "
                     >
                       {slide.subtitle}
