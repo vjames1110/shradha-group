@@ -2,19 +2,19 @@ import BusinessHero from "../../components/business/BusinessHero";
 import FeaturesGrid from "../../components/business/FeaturesGrid";
 import { ArrowUpRight } from "lucide-react";
 
-import ddgsImage from "../../assets/images/services/cattlefeed/ddgs-cattlefeed.webp"
-import agriImage from "../../assets/images/services/cattlefeed/agriculture-commodities.webp"
-import feedImage from "../../assets/images/services/cattlefeed/sustainable-feed.webp"
+import ddgsImage from "../../assets/images/services/cattlefeed/ddgsImage.jpeg"
+import meshImage from "../../assets/images/services/cattlefeed/mesh.png"
+import pelletImage from "../../assets/images/services/cattlefeed/pellet.png"
 
-import cattlefeedImage from "../../assets/images/services/cattlefeed/cattlefeed.jpg";
+import cattlefeedImage from "../../assets/images/services/cattlefeed/cattleFeedHero.jpeg";
 
 const features = [
   {
     title: "DDGS Supply",
     image: ddgsImage,
-    shortDescription: "High-quality cattle nutrition.",
+    shortDescription: "High-quality nutrition.",
     fullDescription:
-      "Supplying premium DDGS products for healthy livestock development.",
+      "Supplying corn, maize and rice-based DDGS for poultry, fish, and livestock feed development.",
 
     applications: [
       "Dairy Farms",
@@ -24,30 +24,31 @@ const features = [
   },
 
   {
-    title: "Agricultural Commodities",
-    image: agriImage,
-    shortDescription: "Reliable commodity sourcing.",
+    title: "Cattle Feed Mesh",
+    image: meshImage,
+    shortDescription: "High-quality mesh feed for balanced cattle nutrition.",
     fullDescription:
-      "Providing agricultural products supporting modern farming practices.",
+      "Shradha group supplies premium cattle feed mesh formulated to provide a balanced combination of essential nutrients, proteins, energy, vitamins, and minerals.",
 
     applications: [
-      "Agriculture",
-      "Feed Industry",
-      "Rural Enterprises",
+      "Dairy Cattle",
+      "Commercial Dairy Farms",
+      "Livestock Nutrition",
     ],
   },
 
   {
-    title: "Sustainable Feed Solutions",
-    image: feedImage,
-    shortDescription: "Environmentally responsible nutrition.",
+    title: "Cattle Feed Pellet",
+    image: pelletImage,
+    shortDescription: "Nutrient-rich pellet feed for superior livestock performance.",
     fullDescription:
-      "Promoting sustainable livestock growth through quality feed products.",
+      "Our cattle feed pellets are manufactured using premium-quality ingredients to ensure uniform nutrition, easy handling, and minimal feed wastage. The pelletized form improves feed intake, supports faster growth, increases milk yield, and contribution to better overall livestock health in commercial and dairy farming operations.",
 
     applications: [
-      "Dairy Farming",
-      "Poultry",
-      "Animal Nutrition",
+      "Dairy farms",
+      "Commercial cattle farms",
+      "Milk production",
+      "Livestock growth",
     ],
   },
 ];
@@ -92,9 +93,12 @@ function CattleField() {
           leading-relaxed
         "
             >
-              Shradha Group supplies premium-quality DDGS cattle feed products
-              supporting healthy livestock growth and sustainable agricultural
-              development.
+              We specialize in the strategic sourcing and supply of high-grade rice, 
+              maize, and corn products specifically formulated to meet the evolving 
+              demands of the animal nutrition sector. Our premium agricultural 
+              commodities serve as foundational ingredients for poultry farming, 
+              aquaculture (fish feed), and comprehensive livestock feed development, 
+              ensuring optimal health, growth, and yield for your operations.
             </p>
 
             {/* CTA BUTTON */}

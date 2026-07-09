@@ -51,9 +51,9 @@ const servicesData = [
 
   {
     id: 5,
-    title: "Cattle Feed Supply",
+    title: "Cattle Feed and DDGS Supply",
     description:
-      "Premium DDGS cattle feed supply for sustainable livestock growth.",
+      "Premium DDGS & cattle feed supply for sustainable livestock growth.",
     link: "/services/cattle-feed",
 
     image:

@@ -11,6 +11,7 @@ import chasisReplacementImage from "../../../assets/images/services/engineering/
 import paintingImage from "../../../assets/images/services/engineering/painting.png";
 import agriculturalEquipmentImage from "../../../assets/images/services/engineering/agricultural.png";
 import wheelAlignmentImage from "../../../assets/images/services/engineering/wheelAlignment.png";
+import cabinImage from "../../../assets/images/services/engineering/cabins.png"
 
 const solutions = [
   { title: "Accidental Trailer Repairing", image: trailerServiceImage, description: "Complete structural and mechanical restoration for accident-damaged trailers.", points: ["Damage assessment", "Structural repair", "Final safety inspection"] },
@@ -20,6 +21,7 @@ const solutions = [
   { title: "Painting", image: paintingImage, description: "Industrial-grade preparation and painting for trailers, tippers, and equipment.", points: ["Surface preparation", "Protective coating", "Professional finish"] },
   { title: "Agricultural Equipment", image: agriculturalEquipmentImage, description: "Fabrication, modification, and repair support for agricultural machinery.", points: ["Custom fabrication", "Equipment repair", "Functional testing"] },
   { title: "Wheel Alignment", image: wheelAlignmentImage, description: "Accurate alignment support for trailers and heavy commercial vehicles.", points: ["Alignment diagnosis", "Precision correction", "Tyre-wear optimization"] },
+  { title: "Meka Portable Cabins", image: cabinImage, description: "Portable & Durable custom built cabins perfect for office, guard rooms, toilet etc", points: ["Portable & durable","Custom built solutions", "Custom sizes"] },
 ];
 
 function ImagePlaceholder({ compact = false }) {
