@@ -6,7 +6,6 @@ import ashokLeylandImage from "../../../assets/images/services/engineering/ashok
 import bharatBenzImage from "../../../assets/images/services/engineering/Bharatbenz-logo.png";
 import allTrailerImage from "../../../assets/images/services/engineering/all-trailer.png";
 import agriculturalEquipmentImage from "../../../assets/images/services/engineering/agriculture-logo.png";
-import hyvaLogoImage from "../../../assets/images/services/engineering/hyva-logo.png";
 
 
 const equipment = [
@@ -16,7 +15,6 @@ const equipment = [
   { title: "BharatBenz", image: bharatBenzImage },
   { title: "All Trailers", image: allTrailerImage },
   { title: "Agricultural Equipment", image: agriculturalEquipmentImage },
-  { title: "Hyva", image: hyvaLogoImage },
 ];
 
 function EquipmentHandled() {
