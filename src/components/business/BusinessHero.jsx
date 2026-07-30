@@ -55,11 +55,15 @@ function BusinessHero({ title, subtitle, image, highlights = [] }) {
 
             <h1
               className="
-                text-4xl
+                max-w-xs
+                sm:max-w-full
+                break-words
+                text-[2.1rem]
                 sm:text-6xl
                 md:text-7xl
                 lg:text-[5rem]
-                leading-[1.05]
+                leading-[1.08]
+                sm:leading-[1.05]
                 mt-6
                 mb-6
                 drop-shadow-[0_4px_24px_rgba(0,0,0,0.48)]
